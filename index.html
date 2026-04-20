@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구태호 | Backend Developer Portfolio</title>
+    <meta name="description" content="Node.js · TypeScript · Express 기반 백엔드 개발자 구태호의 포트폴리오입니다. API 설계, 도메인 모델링, 실서비스 배포 경험을 확인하세요.">
+    <meta name="keywords" content="백엔드 개발자, Backend Developer, Node.js, TypeScript, Express, 구태호, 포트폴리오">
+    <meta property="og:title" content="구태호 | Backend Developer Portfolio">
+    <meta property="og:description" content="Node.js · TypeScript · Express 기반 백엔드 개발자 구태호의 포트폴리오">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Koo taeho</div>
+            <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                    <p class="hero-intro">Backend · Problem Solver · Team Player</p>
+                    <h1 class="hero-title">
+                        안녕하세요,<br>
+                        <span class="gradient-text">개발자 구태호</span>입니다
+                    </h1>
+                    <p class="hero-description">
+                        꾸준한 습관을 통해 공부하고 새로운 기술을 학습하는것을 좋아하는 개발자입니다.
+                        실제 서비스로 운영 가능한 백엔드 아키텍처를 설계/개발 하고자하는 신입 개발자입니다.
+                    </p>
+                    <ul class="hero-highlights">
+                        <li>API 설계와 도메인 모델링 중심 개발</li>
+                        <li>실서비스 기준 안정성·확장성 고려</li>
+                        <li>빠른 실행과 협업 커뮤니케이션</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+                        <a href="#contact" class="btn btn-secondary">연락하기</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <a href="https://blossom-scarecrow-4bc.notion.site/58df6114f87e4168964218ded5c5b03e?pvs=74" target="_blank" rel="noopener" class="hero-stat-link">꾸준한 학습 · Notion</a>
+                            <span class="hero-stat-label">기술 기록과 회고를 지속적으로 업데이트</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-value">다양한 툴 · 스택</span>
+                            <span class="hero-stat-label">TypeScript · Node.js · Express · Prisma · Supabase</span>
+                        </div>
+                        <div class="hero-stat-item">
+                            <span class="hero-stat-value">End-to-End</span>
+                            <span class="hero-stat-label">기획부터 배포까지</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    안녕하세요. 백엔드 개발을 중심으로 서비스의 구조와 흐름을 설계하는 데 관심이 많은 개발자입니다.
+                    Node.js와 Express, MySQL 기반으로 웹 서비스를 직접 구현하고 배포하며 API 개발과 데이터베이스 설계 경험을 쌓아왔습니다.
+                    단순한 기능 구현을 넘어 유지보수성과 확장성을 함께 고려하며, 사용자 문제를 실제로 해결할 수 있는 서비스를 만드는 개발자가 되고자 합니다.
+                </p>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>설계 중심 개발</h3>
+                        <p>도메인 구조와 데이터 흐름을 먼저 정의해 유지보수 가능한 코드를 만듭니다.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>운영 관점 사고</h3>
+                        <p>예외 처리, 로그, 배포 안정성까지 고려해 실제 서비스 품질을 높입니다.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>협업 최적화</h3>
+                        <p>Swagger 문서화와 역할 분리로 프론트/디자인/기획과의 협업 속도를 높였습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">기술 역량과 협업 경험을 동시에 쌓아온 과정입니다.</p>
+            <div class="experience-list">
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <span class="experience-org">UMC (University MakeUs Challenge)</span>
+                            <span class="experience-period">2024.03 — 2025.02</span>
+                        </div>
+                        <span class="experience-role">Backend 파트 수료</span>
+                    </div>
+                    <p class="experience-desc">
+                        대학 연합 IT 동아리로, 백엔드 파트에 참여해 Node.js / Express 기반 서버 개발을 학습하고 팀 프로젝트를 진행했습니다.
+                        매주 미션과 스터디를 통해 API 설계, DB 모델링, 배포 등 실무와 가까운 경험을 쌓았습니다.
+                        프론트, 디자이너, 기획자와 팀 프로젝트를 진행하며 협업하는 경험을 가졌습니다.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="exp-tag">Node.js</span>
+                        <span class="exp-tag">Express</span>
+                        <span class="exp-tag">MySQL</span>
+                        <span class="exp-tag">팀 프로젝트</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <span class="experience-org">CHALLKATHON (UMC 주관)</span>
+                            <span class="experience-period">2025.06</span>
+                        </div>
+                        <span class="experience-role">해커톤 참가 (4인 팀)</span>
+                    </div>
+                    <p class="experience-desc">
+                        UMC가 주관한 CHALLKATHON 해커톤에 총 4명 팀으로 참여해, 제한된 시간 안에 아이디어를 구체화하고
+                        서비스 핵심 기능을 구현하며 팀 기반 문제 해결과 빠른 의사결정 경험을 쌓았습니다.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="exp-tag">Hackathon</span>
+                        <span class="exp-tag">Team of 4</span>
+                        <span class="exp-tag">Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- 더 추가하려면 아래 카드를 복사해 사용하세요 -->
+                <!--
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <span class="experience-org">동아리 / 활동 이름</span>
+                            <span class="experience-period">2024.00 — 2024.00</span>
+                        </div>
+                        <span class="experience-role">역할</span>
+                    </div>
+                    <p class="experience-desc">활동 설명을 입력하세요.</p>
+                    <div class="experience-tags">
+                        <span class="exp-tag">태그1</span>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">문제 정의 → 설계 → 구현 → 검증의 흐름으로 정리했습니다.</p>
+            
+            <!-- Wearly Project -->
+            <div class="project-card featured">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Wearly</h3>
+                        <p class="project-subtitle">AI 기반 스마트 의류 관리 & 패션 추천 플랫폼</p>
+                    </div>
+                    <span class="project-badge">Featured</span>
+                </div>
+                
+                <p class="project-description">
+                    OpenAI Vision API를 활용하여 옷장 사진을 자동으로 분류하고, 실시간 날씨 정보를 기반으로 
+                    맞춤형 코디를 추천하는 모바일 서비스입니다. 5명의 팀원과 함께 기획부터 배포까지 진행했습니다.
+                </p>
+
+                <div class="project-focus-grid">
+                    <div class="focus-item">
+                        <div class="focus-label">Problem</div>
+                        <p>AI 분류, 날씨 추천, 인증, 알림을 하나의 사용자 흐름으로 안정적으로 연결해야 했습니다.</p>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-label">My Role</div>
+                        <p>백엔드 구조 설계, 인증 통합, 도메인 모델 확장, AI 응답 검증 파이프라인 구현을 주도했습니다.</p>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-label">Result</div>
+                        <p>업로드 → 분석 → 저장 → 추천 → 알림의 end-to-end 흐름을 실제 배포 환경에서 검증했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="project-architecture">
+                    <h4 class="architecture-title">시스템 구조 (Architecture Snapshot)</h4>
+                    <div class="architecture-grid">
+                        <div class="architecture-card">
+                            <h5>Core Components</h5>
+                            <ul>
+                                <li>Android Client (Kotlin)</li>
+                                <li>Express API Server (TypeScript)</li>
+                                <li>OpenAI Vision + OpenWeatherMap</li>
+                                <li>Supabase Postgres + Storage</li>
+                                <li>Scheduler + FCM Push</li>
+                            </ul>
+                        </div>
+                        <div class="architecture-card">
+                            <h5>Main Request Flow</h5>
+                            <ol>
+                                <li>사용자 업로드 요청 수신 및 인증 검증</li>
+                                <li>이미지 원본 Storage 저장</li>
+                                <li>Vision 분석 호출 후 응답 스키마 검증</li>
+                                <li>정규화된 메타데이터를 DB에 저장</li>
+                                <li>날씨 데이터와 매칭하여 추천 결과 생성</li>
+                                <li>스케줄 기반 푸시 알림으로 추천 전달</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-diagram">
+                    <h4 class="diagram-title">아키텍처 다이어그램</h4>
+                    <div class="diagram-flow">
+                        <div class="diagram-node">Android Client</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node">Express API</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node">OpenAI Vision</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node">Metadata Normalize</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node">Postgres</div>
+                    </div>
+                    <div class="diagram-flow secondary">
+                        <div class="diagram-node soft">OpenWeatherMap</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">Recommendation Service</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">Scheduler</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">FCM Push</div>
+                    </div>
+                    <p class="diagram-note">핵심 아이디어: 업로드/분석/저장/추천/알림을 책임 단위로 분리해 장애 영향 범위를 제한하고 확장성을 확보했습니다.</p>
+                </div>
+
+                <div class="project-contribution">
+                    <h4 class="contribution-title">나의 Backend 설계 & 문제 해결</h4>
+                    <p class="contribution-summary">
+                        AI 의류 추천 서비스가 안정적으로 동작하도록 인증 플로우, 의류 등록 도메인, DB 스키마 확장을
+                        중심으로 백엔드 구조를 설계하고 개선했습니다.
+                    </p>
+                    <div class="contribution-grid">
+                        <div class="contribution-item">
+                            <div class="contribution-head">인증 플로우 안정화</div>
+                            <ul>
+                                <li>JWT 기반 액세스/리프레시 토큰 구조에 이메일 인증, Google OAuth 2.0을 통합해 단일 플로우로 설계</li>
+                                <li>미들웨어로 권한 검증을 공통화하여 신규 API 추가 시 인증 로직 중복과 누락을 방지</li>
+                            </ul>
+                        </div>
+                        <div class="contribution-item">
+                            <div class="contribution-head">의류 등록 도메인 설계</div>
+                            <ul>
+                                <li>의류 생성/조회 API를 Controller–Service–Repository 계층으로 분리해 유지보수성과 테스트 용이성 확보</li>
+                                <li>카테고리·색상·계절감 등 Vision 응답을 도메인 모델에 맞게 정규화하여 데이터 일관성 강화</li>
+                            </ul>
+                        </div>
+                        <div class="contribution-item">
+                            <div class="contribution-head">Prisma 스키마 확장</div>
+                            <ul>
+                                <li>이메일 인증, Google Auth, FCM 토큰 등 신규 요구사항을 Prisma 스키마·마이그레이션으로 안전하게 반영</li>
+                                <li>seed 스크립트로 초기 데이터 세팅을 자동화하고 로컬/운영 환경 간 동작을 검증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-features">
+                    <h4 class="features-title">주요 기능</h4>
+                    <ul class="features-list">
+                        <li>
+                            <span class="feature-icon">Vision</span>
+                            <div>
+                                <strong>AI 기반 의류 자동 분류</strong>
+                                <p>OpenAI Vision API로 카테고리, 색상, 계절감 자동 인식</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Weather</span>
+                            <div>
+                                <strong>날씨 기반 코디 추천</strong>
+                                <p>실시간 날씨 API와 연동한 맞춤형 추천 알고리즘</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Notify</span>
+                            <div>
+                                <strong>스마트 알림 시스템</strong>
+                                <p>FCM 푸시 알림으로 스케줄 기반 추천 제공</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Auth</span>
+                            <div>
+                                <strong>안전한 인증 시스템</strong>
+                                <p>JWT + Google OAuth 2.0 소셜 로그인</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-demos">
+                    <h4 class="demos-title">시연 영상</h4>
+                    <div class="demos-grid">
+                        <div class="demo-item">
+                            <div class="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/hJLVTzxRMVc"
+                                    title="Wearly 의류 등록 & 자동 태깅 시연"
+                                    frameborder="0"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="demo-caption">데모 영상1</p>
+                        </div>
+                        <div class="demo-item">
+                            <div class="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/r4A_pfjvllE"
+                                    title="Wearly 날씨 기반 코디 추천 시연"
+                                    frameborder="0"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="demo-caption">데모 영상2</p>
+                        </div>
+                        <div class="demo-item">
+                            <div class="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/d2-ZNGHDOaM"
+                                    title="Wearly 인증 & 전체 플로우 시연"
+                                    frameborder="0"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="demo-caption">회원가입/로그인부터 전체 서비스 프로토타입 영상</p>
+                        </div>
+                        <div class="demo-item">
+                            <div class="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/flmX_rK4zWk"
+                                    title="Wearly 추가 데모 영상"
+                                    frameborder="0"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="demo-caption">실제 시연 영상</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="tech-title">기술 스택</h4>
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <span class="category-label">Backend</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">Database</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Prisma ORM</span>
+                                <span class="tech-tag">Supabase</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">AI & APIs</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">OpenAI GPT-4o</span>
+                                <span class="tech-tag">OpenWeatherMap</span>
+                                <span class="tech-tag">FCM</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">Frontend</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Android</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-challenges">
+                    <h4 class="challenges-title">기술적 도전</h4>
+                    <div class="challenges-grid">
+                        <div class="challenge-item">
+                            <div class="challenge-number">01</div>
+                            <p>가변적인 OpenAI Vision 응답 포맷을 스키마 기반으로 파싱·검증해, 실패 응답은 재요청·로그로 분리하는 안정적인 안전망 설계</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">02</div>
+                            <p>상의·하의·아우터·악세사리 등 복수 아이템으로 구성된 Outfit을 다대다 관계와 태그(계절·스타일) 모델로 표현해 확장 가능한 데이터 구조 설계</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">03</div>
+                            <p>의류 이미지 원본은 Supabase Storage에, 메타데이터는 DB에 분리 저장하여 대량 업로드 시에도 API 응답 지연을 최소화</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">04</div>
+                            <p>OpenWeatherMap 실시간/예보 데이터를 활용해 지역·시간대별 체감 온도와 의류 속성(두께·계절감)을 매칭하는 추천 가중치 튜닝</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-quality-grid">
+                    <div class="quality-card">
+                        <h4 class="quality-title">예외 처리 & 운영 안정성</h4>
+                        <ul>
+                            <li>OpenAI 응답 형식 불일치를 스키마 검증으로 차단하고, 실패 케이스를 재요청·로그로 분리</li>
+                            <li>JWT Access/Refresh + OAuth를 단일 인증 흐름으로 통합해 토큰/권한 누락 리스크 감소</li>
+                            <li>이미지 원본과 메타데이터를 분리 저장해 대량 업로드 시 API 병목을 완화</li>
+                            <li>미들웨어 공통화로 신규 엔드포인트 추가 시 인증·검증 로직 누락 방지</li>
+                        </ul>
+                    </div>
+                    <div class="quality-card">
+                        <h4 class="quality-title">사용자 경험 품질(Backend 관점)</h4>
+                        <ul>
+                            <li>분석·추천 파이프라인을 분리하여 실패 지점을 명확히 관리하고 사용자 오류 체감 최소화</li>
+                            <li>날씨/시간대 기반 추천 가중치로 사용자가 체감하는 추천 정확도를 개선</li>
+                            <li>FCM 스케줄링으로 사용자가 필요한 시점에 코디 추천을 전달</li>
+                            <li>Swagger 문서화를 통해 프론트-백엔드 협업 속도와 API 사용 일관성 향상</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-metrics">
+                    <h4 class="metrics-title">아키텍처 관점 핵심 포인트</h4>
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-key">Domain Layers</span>
+                            <span class="metric-value">Controller · Service · Repository 분리</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Data Policy</span>
+                            <span class="metric-value">Image(Storage) / Metadata(DB) 분리</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Reliability</span>
+                            <span class="metric-value">AI 응답 검증 + 실패 흐름 분리</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Scale Readiness</span>
+                            <span class="metric-value">스케줄러/알림/추천 책임 분리 구조</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/Melonging/wearly-backend" target="_blank" rel="noopener" class="project-link-btn">
+                        Wearly Backend GitHub
+                    </a>
+                    <a href="https://github.com/Melonging/wearly-frontend.git" target="_blank" rel="noopener" class="project-link-btn">
+                        Wearly Frontend GitHub
+                    </a>
+                    <a href="https://www.notion.so/Wearly-2d3183d0d46c803583c8dbe2f5aa65df" target="_blank" rel="noopener" class="project-link-btn">
+                        Notion 프로젝트 문서 보기
+                    </a>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">팀 구성</span>
+                        <span class="meta-value">백엔드 5명 프론트 3명 디자이너 1명 기획자 1명</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">배포</span>
+                        <span class="meta-value">Render (Backend)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">문서화</span>
+                        <span class="meta-value">Swagger API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Random Chat Project -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Random Chat Application</h3>
+                        <p class="project-subtitle">대학 인증 기반 1-on-1 익명 채팅 서비스</p>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    대학 이메일 인증을 대학생들끼리의 실시간 1-on-1 익명 채팅 서비스입니다. 
+                    Socket.IO를 활용한 양방향 실시간 통신, JWT 자동 갱신, 6개 모듈로 리팩토링된 프론트엔드가 특징입니다.
+                </p>
+
+                <div class="project-focus-grid">
+                    <div class="focus-item">
+                        <div class="focus-label">Problem</div>
+                        <p>실시간 연결 불안정, 인증 만료, 보안 입력 처리 등 채팅 서비스의 핵심 리스크를 동시에 다뤄야 했습니다.</p>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-label">My Role</div>
+                        <p>실시간 통신 안정화, JWT 자동 갱신, 프론트 모듈화, 입력 검증/XSS 방지 로직을 설계·구현했습니다.</p>
+                    </div>
+                    <div class="focus-item">
+                        <div class="focus-label">Result</div>
+                        <p>재연결·토큰 갱신·상태 분리 구조를 통해 사용자 세션 연속성과 코드 유지보수성을 함께 개선했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="project-architecture">
+                    <h4 class="architecture-title">시스템 구조 (Architecture Snapshot)</h4>
+                    <div class="architecture-grid">
+                        <div class="architecture-card">
+                            <h5>Core Components</h5>
+                            <ul>
+                                <li>Web Client (Vanilla JS Modules)</li>
+                                <li>Express + Socket.IO Server</li>
+                                <li>JWT Auth + Refresh Flow</li>
+                                <li>MySQL + Connection Pooling</li>
+                            </ul>
+                        </div>
+                        <div class="architecture-card">
+                            <h5>Main Request Flow</h5>
+                            <ol>
+                                <li>대학 이메일 인증 후 계정 생성</li>
+                                <li>JWT 발급 및 세션 상태 초기화</li>
+                                <li>Socket 연결/매칭/메시지 전송 처리</li>
+                                <li>토큰 만료 전 자동 갱신으로 세션 유지</li>
+                                <li>재연결 시도 및 UI 피드백 제공</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-diagram">
+                    <h4 class="diagram-title">아키텍처 다이어그램</h4>
+                    <div class="diagram-flow">
+                        <div class="diagram-node">Web Client</div>
+                        <span class="diagram-arrow">↔</span>
+                        <div class="diagram-node">Socket.IO Gateway</div>
+                        <span class="diagram-arrow">↔</span>
+                        <div class="diagram-node">Chat Service</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node">MySQL</div>
+                    </div>
+                    <div class="diagram-flow secondary">
+                        <div class="diagram-node soft">Auth Service</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">JWT Access/Refresh</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">Session Continuity</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-node soft">Reconnect Policy</div>
+                    </div>
+                    <p class="diagram-note">핵심 아이디어: 실시간 통신, 인증, 상태 관리 책임을 모듈로 분리해 장애 복구와 기능 확장 시 복잡도를 줄였습니다.</p>
+                </div>
+
+                <div class="project-features">
+                    <h4 class="features-title">주요 기능</h4>
+                    <ul class="features-list">
+                        <li>
+                            <span class="feature-icon">Verify</span>
+                            <div>
+                                <strong>대학 이메일 인증</strong>
+                                <p>Univcert API를 통한 안전한 사용자 검증 및 회원가입</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Chat</span>
+                            <div>
+                                <strong>실시간 익명 채팅</strong>
+                                <p>Socket.IO 기반 1-on-1 랜덤 매칭 및 메시지 전송</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Social</span>
+                            <div>
+                                <strong>친구 시스템</strong>
+                                <p>친구 요청/수락 및 친구 채팅 기능</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">Secure</span>
+                            <div>
+                                <strong>보안 인증</strong>
+                                <p>JWT 자동 갱신 + bcrypt 패스워드 + XSS 방지</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-demos">
+                    <h4 class="demos-title">시연 영상</h4>
+                    <div class="demos-grid">
+                        <div class="demo-item">
+                            <div class="video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/IPHIX9HRfMA"
+                                    title="Unknown 랜덤 채팅 서비스 시연"
+                                    frameborder="0"
+                                    loading="lazy"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="demo-caption">Unknown 실제 시연 영상</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="tech-title">기술 스택</h4>
+                    <div class="tech-stack">
+                        <div class="tech-category">
+                            <span class="category-label">Backend</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">Socket.IO</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">Database</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Connection Pooling</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">Security</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">bcrypt</span>
+                                <span class="tech-tag">CORS</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <span class="category-label">Frontend</span>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Vanilla JS</span>
+                                <span class="tech-tag">ES6 Modules</span>
+                                <span class="tech-tag">Pug</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-challenges">
+                    <h4 class="challenges-title">기술적 도전</h4>
+                    <div class="challenges-grid">
+                        <div class="challenge-item">
+                            <div class="challenge-number">01</div>
+                            <p>Socket.IO 실시간 통신 및 자동 재연결 (5회) 구현</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">02</div>
+                            <p>JWT 토큰 자동 갱신 로직 설계 (만료 1분 전)</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">03</div>
+                            <p>단일 파일 473줄 → 6개 모듈 738줄로 리팩토링</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">04</div>
+                            <p>입력 검증 + XSS 방지 보안 구현</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-quality-grid">
+                    <div class="quality-card">
+                        <h4 class="quality-title">예외 처리 & 운영 안정성</h4>
+                        <ul>
+                            <li>Socket 재연결 정책(최대 5회)으로 일시적 네트워크 불안정 대응</li>
+                            <li>JWT 만료 1분 전 자동 갱신으로 갑작스러운 세션 종료 리스크 최소화</li>
+                            <li>입력 검증 + XSS 방지 로직으로 악성 입력 시나리오 차단</li>
+                            <li>상태/토큰/소켓/검증 모듈 분리로 장애 원인 추적성과 수정 속도 개선</li>
+                        </ul>
+                    </div>
+                    <div class="quality-card">
+                        <h4 class="quality-title">사용자 경험 품질(Backend 관점)</h4>
+                        <ul>
+                            <li>실시간 연결 끊김 시 자동 복구 흐름으로 대화 연속성 유지</li>
+                            <li>토스트·스피너·모달을 통해 상태를 즉시 전달하여 사용자 혼란 감소</li>
+                            <li>친구 시스템/랜덤 매칭 흐름 분리로 사용 시나리오별 응답 예측 가능성 향상</li>
+                            <li>모듈화된 구조로 기능 추가 시 기존 UX 품질 저하를 최소화</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-metrics">
+                    <h4 class="metrics-title">아키텍처 관점 핵심 포인트</h4>
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-key">Real-time Reliability</span>
+                            <span class="metric-value">자동 재연결 5회 정책</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Auth Continuity</span>
+                            <span class="metric-value">JWT 만료 1분 전 자동 갱신</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Code Maintainability</span>
+                            <span class="metric-value">전역 변수 13개 → 0개</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-key">Modular Design</span>
+                            <span class="metric-value">State · Token · Socket · Validation 분리</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/kootaeho/Websocket.git" target="_blank" rel="noopener" class="project-link-btn">
+                        Random Chat GitHub
+                    </a>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">코드 개선</span>
+                        <span class="meta-value">13개 전역 변수 → 0개</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">모듈 구조</span>
+                        <span class="meta-value">State, Token, Socket, Validation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">UX</span>
+                        <span class="meta-value">로딩 스피너, 토스트, 모달</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">Backend</div>
+                    <h3 class="skill-name">Backend</h3>
+                    <ul class="skill-list">
+                        <li>TypeScript</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Prisma ORM</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">DB</div>
+                    <h3 class="skill-name">Database</h3>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>ERD Cloud</li>
+                        <li>MySQL</li>
+                        <li>Supabase</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">API</div>
+                    <h3 class="skill-name">AI & APIs</h3>
+                    <ul class="skill-list">
+                        <li>OpenAI API</li>
+                        <li>RESTful API</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">Auth</div>
+                    <h3 class="skill-name">Authentication</h3>
+                    <ul class="skill-list">
+                        <li>JWT</li>
+                        <li>OAuth 2.0</li>
+                        <li>Security</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">Ops</div>
+                    <h3 class="skill-name">DevOps</h3>
+                    <ul class="skill-list">
+                        <li>Render</li>
+                        <li>Vercel</li>
+                        <li>Git/GitHub</li>
+                        <li>Swagger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-description">프로젝트 협업이나 궁금한 점이 있으시면 언제든 연락주세요!</p>
+            <div class="contact-links">
+                <a href="mailto:taehokoo82@gmail.com" class="contact-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/kootaeho" target="_blank" rel="noopener" class="contact-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/taeho-koo-187862297/" target="_blank" rel="noopener" class="contact-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://blossom-scarecrow-4bc.notion.site/58df6114f87e4168964218ded5c5b03e?pvs=74" target="_blank" rel="noopener" class="contact-link" title="Notion">
+                    <svg class="notion-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="100" fill="currentColor" rx="10"/>
+                        <text x="50" y="70" font-size="55" font-weight="900" fill="white" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">N</text>
+                    </svg>
+                    <span>Notion</span>
+                </a>
+                <a href="tel:01062483654" class="contact-link contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <span>010-6248-3654</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

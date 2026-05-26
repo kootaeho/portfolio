@@ -6,9 +6,17 @@
     <title>구태호 | Backend Developer Portfolio</title>
     <meta name="description" content="Node.js · TypeScript · Express 기반 백엔드 개발자 구태호의 포트폴리오입니다. API 설계, 도메인 모델링, 실서비스 배포 경험을 확인하세요.">
     <meta name="keywords" content="백엔드 개발자, Backend Developer, Node.js, TypeScript, Express, 구태호, 포트폴리오">
+    <link rel="canonical" href="https://kootaeho.github.io/portfolio/">
     <meta property="og:title" content="구태호 | Backend Developer Portfolio">
     <meta property="og:description" content="Node.js · TypeScript · Express 기반 백엔드 개발자 구태호의 포트폴리오">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kootaeho.github.io/portfolio/">
+    <meta property="og:image" content="https://kootaeho.github.io/portfolio/og-image.png">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="구태호 | Backend Developer Portfolio">
+    <meta name="twitter:description" content="Node.js · TypeScript · Express 기반 백엔드 개발자 구태호의 포트폴리오">
+    <meta name="twitter:image" content="https://kootaeho.github.io/portfolio/og-image.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +34,12 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link">소개</a></li>
+                <li><a href="#experience" class="nav-link">경험</a></li>
+                <li><a href="#projects" class="nav-link">프로젝트</a></li>
+                <li><a href="#education" class="nav-link">학력/교육/어학/자격</a></li>
+                <li><a href="#skills" class="nav-link">기술</a></li>
+                <li><a href="#contact" class="nav-link">연락처</a></li>
             </ul>
         </div>
     </nav>
@@ -39,14 +48,14 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                    <p class="hero-intro">Backend · Problem Solver · Team Player</p>
+                    <p class="hero-intro">백엔드 · 문제 해결 · 협업</p>
                     <h1 class="hero-title">
                         안녕하세요,<br>
                         <span class="gradient-text">개발자 구태호</span>입니다
                     </h1>
                     <p class="hero-description">
-                        꾸준한 습관을 통해 공부하고 새로운 기술을 학습하는것을 좋아하는 개발자입니다.
-                        실제 서비스로 운영 가능한 백엔드 아키텍처를 설계/개발 하고자하는 신입 개발자입니다.
+                        꾸준히 학습하며 새로운 기술을 빠르게 익히는 백엔드 개발자입니다.
+                        운영 가능한 구조를 설계하고 구현하는 데 집중합니다.
                     </p>
                     <ul class="hero-highlights">
                         <li>API 설계와 도메인 모델링 중심 개발</li>
@@ -55,20 +64,21 @@
                     </ul>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+                        <a href="https://github.com/kootaeho" target="_blank" rel="noopener" class="btn btn-secondary">GitHub 보기</a>
                         <a href="#contact" class="btn btn-secondary">연락하기</a>
                     </div>
                     <div class="hero-stats">
                         <div class="hero-stat-item">
                             <span class="hero-stat-value">120+</span>
-                            <span class="hero-stat-label">Learning Record</span>
+                            <span class="hero-stat-label">학습 기록 Learning Record</span>
                         </div>
                         <div class="hero-stat-item">
                             <span class="hero-stat-value">8+</span>
-                            <span class="hero-stat-label">Tech Stack</span>
+                            <span class="hero-stat-label">기술 스택 Tech Stack</span>
                         </div>
                         <div class="hero-stat-item">
                             <span class="hero-stat-value">End-to-End</span>
-                            <span class="hero-stat-label">Product Delivery</span>
+                            <span class="hero-stat-label">전달 경험 Product Delivery</span>
                         </div>
                     </div>
             </div>
@@ -78,25 +88,36 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">소개 About</h2>
             <div class="about-content">
                 <p class="about-text">
-                    안녕하세요. 백엔드 개발을 중심으로 서비스의 구조와 흐름을 설계하는 데 관심이 많은 개발자입니다.
-                    Node.js와 Express, MySQL 기반으로 웹 서비스를 직접 구현하고 배포하며 API 개발과 데이터베이스 설계 경험을 쌓아왔습니다.
-                    단순한 기능 구현을 넘어 유지보수성과 확장성을 함께 고려하며, 사용자 문제를 실제로 해결할 수 있는 서비스를 만드는 개발자가 되고자 합니다.
+                    백엔드 개발을 중심으로 서비스 구조와 흐름을 설계하는 데 관심이 많습니다.
+                    Node.js · Express · MySQL 기반으로 API 개발, DB 설계, 배포까지 직접 경험하며 유지보수성과 확장성을 함께 고려해 왔습니다.
                 </p>
                 <div class="about-cards">
                     <div class="about-card">
-                        <h3>Design-oriented.</h3>
-                        <p>I design domain flow first, then implement resilient features with long-term maintainability in mind.</p>
+                        <div class="about-card-icon" aria-hidden="true">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3>설계 중심 Design</h3>
+                        <p>도메인 흐름을 먼저 설계하고, Controller · Service · Repository 계층으로 유지보수 가능한 구조를 구현합니다.</p>
+                        <div class="about-metric">Layered Design</div>
                     </div>
                     <div class="about-card">
-                        <h3>Operational thinking.</h3>
-                        <p>I optimize reliability, logging, and deployment quality so each feature behaves well in production.</p>
+                        <div class="about-card-icon" aria-hidden="true">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>운영 안정성 Reliability</h3>
+                        <p>인증, 예외 처리, 응답 검증 흐름을 명확히 분리해 운영 환경에서도 안정적으로 동작하도록 개선합니다.</p>
+                        <div class="about-metric">Error-safe Flow</div>
                     </div>
                     <div class="about-card">
-                        <h3>Collaboration.</h3>
-                        <p>I communicate clearly with docs and role boundaries to keep cross-functional teamwork fast and stable.</p>
+                        <div class="about-card-icon" aria-hidden="true">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3>협업 지향 Collaboration</h3>
+                        <p>Swagger 문서화와 명확한 API 커뮤니케이션으로 프론트엔드·기획과 빠르게 협업하는 개발 문화를 지향합니다.</p>
+                        <div class="about-metric">Docs & Communication</div>
                     </div>
                 </div>
             </div>
@@ -106,7 +127,7 @@
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">경험 Experience</h2>
             <p class="section-subtitle">기술 역량과 협업 경험을 동시에 쌓아온 과정입니다.</p>
             <div class="experience-list">
 
@@ -119,9 +140,8 @@
                         <span class="experience-role">Backend 파트 수료</span>
                     </div>
                     <p class="experience-desc">
-                        대학 연합 IT 동아리로, 백엔드 파트에 참여해 Node.js / Express 기반 서버 개발을 학습하고 팀 프로젝트를 진행했습니다.
-                        매주 미션과 스터디를 통해 API 설계, DB 모델링, 배포 등 실무와 가까운 경험을 쌓았습니다.
-                        프론트, 디자이너, 기획자와 팀 프로젝트를 진행하며 협업하는 경험을 가졌습니다.
+                        UMC 백엔드 파트에서 Node.js / Express 기반 서버 개발을 학습하고 팀 프로젝트를 수행했습니다.
+                        주차별 미션과 스터디를 통해 API 설계, DB 모델링, 배포를 실습하며 협업 경험을 쌓았습니다.
                     </p>
                     <div class="experience-tags">
                         <span class="exp-tag">Node.js</span>
@@ -140,8 +160,8 @@
                         <span class="experience-role">해커톤 참가 (4인 팀)</span>
                     </div>
                     <p class="experience-desc">
-                        UMC가 주관한 CHALLKATHON 해커톤에 총 4명 팀으로 참여해, 제한된 시간 안에 아이디어를 구체화하고
-                        서비스 핵심 기능을 구현하며 팀 기반 문제 해결과 빠른 의사결정 경험을 쌓았습니다.
+                        CHALLKATHON 해커톤(4인 팀)에서 제한된 시간 내 아이디어를 구체화하고 핵심 기능을 구현했습니다.
+                        빠른 의사결정과 팀 기반 문제 해결 역량을 강화했습니다.
                     </p>
                     <div class="experience-tags">
                         <span class="exp-tag">Hackathon</span>
@@ -174,7 +194,7 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">프로젝트 Projects</h2>
             <p class="section-subtitle">문제 정의 → 설계 → 구현 → 검증의 흐름으로 정리했습니다.</p>
             
             <!-- Wearly Project -->
@@ -187,26 +207,26 @@
                         </div>
                         <p class="project-subtitle">AI 기반 스마트 의류 관리 & 패션 추천 플랫폼</p>
                     </div>
-                    <span class="project-badge">Featured</span>
+                    <span class="project-badge">대표 프로젝트 Featured</span>
                 </div>
                 
                 <p class="project-description">
-                    OpenAI Vision API를 활용하여 옷장 사진을 자동으로 분류하고, 실시간 날씨 정보를 기반으로 
-                    맞춤형 코디를 추천하는 모바일 서비스입니다. 5명의 팀원과 함께 기획부터 배포까지 진행했습니다.
+                    OpenAI Vision으로 의류를 자동 분류하고, 실시간 날씨 기반 코디를 추천하는 모바일 서비스입니다.
+                    팀과 함께 기획부터 배포까지 end-to-end로 진행했습니다.
                 </p>
 
                 <div class="project-focus-grid">
                     <div class="focus-item">
-                        <div class="focus-label">Problem</div>
-                        <p>AI 분류, 날씨 추천, 인증, 알림을 하나의 사용자 흐름으로 안정적으로 연결해야 했습니다.</p>
+                            <div class="focus-label">문제 Problem</div>
+                        <p>AI 분류·날씨 추천·인증·알림을 하나의 흐름으로 안정적으로 연결해야 했습니다.</p>
                     </div>
                     <div class="focus-item">
-                        <div class="focus-label">My Role</div>
+                            <div class="focus-label">역할 My Role</div>
                         <p>백엔드 구조 설계, 인증 통합, 도메인 모델 확장, AI 응답 검증 파이프라인 구현을 주도했습니다.</p>
                     </div>
                     <div class="focus-item">
-                        <div class="focus-label">Result</div>
-                        <p>업로드 → 분석 → 저장 → 추천 → 알림의 end-to-end 흐름을 실제 배포 환경에서 검증했습니다.</p>
+                            <div class="focus-label">결과 Result</div>
+                        <p>업로드→분석→저장→추천→알림 흐름을 실제 배포 환경에서 검증했습니다.</p>
                     </div>
                 </div>
 
@@ -214,7 +234,7 @@
                     <h4 class="architecture-title">시스템 구조 (Architecture Snapshot)</h4>
                     <div class="architecture-grid">
                         <div class="architecture-card">
-                            <h5>Core Components</h5>
+                            <h5>핵심 구성 Core Components</h5>
                             <ul>
                                 <li>Android Client (Kotlin)</li>
                                 <li>Express API Server (TypeScript)</li>
@@ -224,7 +244,7 @@
                             </ul>
                         </div>
                         <div class="architecture-card">
-                            <h5>Main Request Flow</h5>
+                            <h5>요청 흐름 Main Request Flow</h5>
                             <ol>
                                 <li>사용자 업로드 요청 수신 및 인증 검증</li>
                                 <li>이미지 원본 Storage 저장</li>
@@ -265,8 +285,8 @@
                 <div class="project-contribution">
                     <h4 class="contribution-title">나의 Backend 설계 & 문제 해결</h4>
                     <p class="contribution-summary">
-                        AI 의류 추천 서비스가 안정적으로 동작하도록 인증 플로우, 의류 등록 도메인, DB 스키마 확장을
-                        중심으로 백엔드 구조를 설계하고 개선했습니다.
+                        인증 플로우, 의류 등록 도메인, DB 스키마 확장을 중심으로
+                        서비스가 안정적으로 동작하도록 백엔드 구조를 설계·개선했습니다.
                     </p>
                     <div class="contribution-grid">
                         <div class="contribution-item">
@@ -529,22 +549,22 @@
                 </div>
                 
                 <p class="project-description">
-                    대학 이메일 인증을 대학생들끼리의 실시간 1-on-1 익명 채팅 서비스입니다. 
-                    Socket.IO를 활용한 양방향 실시간 통신, JWT 자동 갱신, 6개 모듈로 리팩토링된 프론트엔드가 특징입니다.
+                    대학 이메일 인증 기반의 1:1 익명 채팅 서비스입니다.
+                    Socket.IO 실시간 통신, JWT 자동 갱신, 프론트 모듈화 구조를 구현했습니다.
                 </p>
 
                 <div class="project-focus-grid">
                     <div class="focus-item">
-                        <div class="focus-label">Problem</div>
-                        <p>실시간 연결 불안정, 인증 만료, 보안 입력 처리 등 채팅 서비스의 핵심 리스크를 동시에 다뤄야 했습니다.</p>
+                            <div class="focus-label">문제 Problem</div>
+                        <p>연결 불안정, 인증 만료, 보안 입력 처리 등 핵심 리스크를 동시에 해결해야 했습니다.</p>
                     </div>
                     <div class="focus-item">
-                        <div class="focus-label">My Role</div>
+                            <div class="focus-label">역할 My Role</div>
                         <p>실시간 통신 안정화, JWT 자동 갱신, 프론트 모듈화, 입력 검증/XSS 방지 로직을 설계·구현했습니다.</p>
                     </div>
                     <div class="focus-item">
-                        <div class="focus-label">Result</div>
-                        <p>재연결·토큰 갱신·상태 분리 구조를 통해 사용자 세션 연속성과 코드 유지보수성을 함께 개선했습니다.</p>
+                            <div class="focus-label">결과 Result</div>
+                        <p>재연결·토큰 갱신·상태 분리로 세션 연속성과 유지보수성을 함께 개선했습니다.</p>
                     </div>
                 </div>
 
@@ -552,7 +572,7 @@
                     <h4 class="architecture-title">시스템 구조 (Architecture Snapshot)</h4>
                     <div class="architecture-grid">
                         <div class="architecture-card">
-                            <h5>Core Components</h5>
+                            <h5>핵심 구성 Core Components</h5>
                             <ul>
                                 <li>Web Client (Vanilla JS Modules)</li>
                                 <li>Express + Socket.IO Server</li>
@@ -561,7 +581,7 @@
                             </ul>
                         </div>
                         <div class="architecture-card">
-                            <h5>Main Request Flow</h5>
+                            <h5>요청 흐름 Main Request Flow</h5>
                             <ol>
                                 <li>대학 이메일 인증 후 계정 생성</li>
                                 <li>JWT 발급 및 세션 상태 초기화</li>
@@ -776,10 +796,47 @@
         </div>
     </section>
 
+    <!-- Education & Certification Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title section-title-nowrap">학력 · 교육 · 어학 · 자격 Education / Certification</h2>
+            <p class="section-subtitle">전공 기반 역량, 실무형 학습 과정, 어학 커뮤니케이션 역량, 공인 이력입니다.</p>
+            <div class="education-grid">
+                <article class="education-card">
+                    <h3>학력 Academic Background</h3>
+                    <ul>
+                        <li><strong>한국외국어대학교 컴퓨터공학과</strong> (2022.03 — 2026.03)</li>
+                        <li><strong>졸업</strong> · 학점 3.56</li>
+                    </ul>
+                </article>
+                <article class="education-card">
+                    <h3>교육 과정 Training</h3>
+                    <ul>
+                        <li><strong>UMC Backend 파트 수료</strong> (2024.03 — 2025.02)</li>
+                        <li>Node.js · Express · DB 모델링 · API 설계 · 배포 중심 팀 프로젝트 수행</li>
+                    </ul>
+                </article>
+                <article class="education-card">
+                    <h3>어학 능력 Language Proficiency</h3>
+                    <ul>
+                        <li><strong>R-EIP(교내 회화 프로그램)</strong> 튜티 참여 후, <strong>유급 튜터</strong>로 선발되어 근무</li>
+                        <li>한국외국어대학교 외국어교육센터 주관 <strong>영어토론대회 우승</strong></li>
+                    </ul>
+                </article>
+                <article class="education-card">
+                    <h3>자격 Certifications</h3>
+                    <ul>
+                        <li><strong>OPIc IH</strong> (공인 영어 회화 성적)</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">기술 스택 Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">Backend</div>
@@ -837,8 +894,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Let's connect. Reach out for collaboration or questions!</h2>
-            <p class="contact-description">Email, GitHub, LinkedIn, Notion, and phone — one click away.</p>
+            <h2 class="section-title">연락처 Contact</h2>
             <div class="contact-links">
                 <a href="mailto:taehokoo82@gmail.com" class="contact-link" title="Email">
                     <i class="fas fa-envelope"></i>
@@ -861,7 +917,7 @@
                 </a>
                 <a href="tel:01062483654" class="contact-link contact-phone">
                     <i class="fas fa-phone"></i>
-                    <span>010-6248-3654</span>
+                    <span>010-****-3654</span>
                 </a>
             </div>
         </div>
@@ -874,15 +930,15 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Portfolio</h4>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
+                    <a href="#about">소개</a>
+                    <a href="#experience">경험</a>
+                    <a href="#projects">프로젝트</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Skills</h4>
-                    <a href="#skills">Backend</a>
-                    <a href="#skills">AI/APIs</a>
-                    <a href="#skills">Database</a>
+                    <h4>Profile</h4>
+                    <a href="#education">학력/교육/어학/자격</a>
+                    <a href="#skills">기술 스택</a>
+                    <a href="#contact">연락처</a>
                 </div>
                 <div class="footer-col">
                     <h4>Connect</h4>

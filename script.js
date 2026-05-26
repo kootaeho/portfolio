@@ -1,13 +1,37 @@
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const targetSelector = this.getAttribute('href');
+        if (!targetSelector || targetSelector === '#') return;
+
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            block: 'start'
+        });
+
+        if (history.pushState) {
+            history.pushState(null, '', targetSelector);
+        } else {
+            window.location.hash = targetSelector;
+        }
+
+        const hadTabIndex = target.hasAttribute('tabindex');
+        if (!hadTabIndex) {
+            target.setAttribute('tabindex', '-1');
+        }
+
+        target.focus({ preventScroll: true });
+
+        if (!hadTabIndex) {
+            target.addEventListener('blur', () => {
+                target.removeAttribute('tabindex');
+            }, { once: true });
         }
     });
 });

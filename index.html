@@ -35,10 +35,10 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">소개</a></li>
+                <li><a href="#skills" class="nav-link">기술</a></li>
+                <li><a href="#education" class="nav-link">학력/교육/어학/자격</a></li>
                 <li><a href="#experience" class="nav-link">경험</a></li>
                 <li><a href="#projects" class="nav-link">프로젝트</a></li>
-                <li><a href="#education" class="nav-link">학력/교육/어학/자격</a></li>
-                <li><a href="#skills" class="nav-link">기술</a></li>
                 <li><a href="#contact" class="nav-link">연락처</a></li>
             </ul>
         </div>
@@ -90,37 +90,228 @@
         <div class="container">
             <h2 class="section-title">소개 About</h2>
             <div class="about-content">
-                <p class="about-text">
-                    백엔드 개발을 중심으로 서비스 구조와 흐름을 설계하는 데 관심이 많습니다.
-                    Node.js · Express · MySQL 기반으로 API 개발, DB 설계, 배포까지 직접 경험하며 유지보수성과 확장성을 함께 고려해 왔습니다.
-                </p>
-                <div class="about-cards">
-                    <div class="about-card">
-                        <div class="about-card-icon" aria-hidden="true">
-                            <i class="fa-solid fa-diagram-project"></i>
-                        </div>
-                        <h3>설계 중심 Design</h3>
-                        <p>도메인 흐름을 먼저 설계하고, Controller · Service · Repository 계층으로 유지보수 가능한 구조를 구현합니다.</p>
-                        <div class="about-metric">Layered Design</div>
+                <div class="about-profile">
+                    <div class="about-photo-card">
+                        <img src="profileimg.jpg" alt="구태호 프로필 사진" class="about-photo">
                     </div>
-                    <div class="about-card">
-                        <div class="about-card-icon" aria-hidden="true">
-                            <i class="fa-solid fa-shield-halved"></i>
+                    <div class="about-info-card">
+                        <div class="about-info-head">
+                            <p class="about-info-eyebrow">Basic Profile</p>
+                            <h3 class="about-info-title">구태호 <span>Backend Developer</span></h3>
+                            <p class="about-info-description">포트폴리오 초반에서 빠르게 파악할 수 있도록 핵심 기본정보를 정리했습니다.</p>
                         </div>
-                        <h3>운영 안정성 Reliability</h3>
-                        <p>인증, 예외 처리, 응답 검증 흐름을 명확히 분리해 운영 환경에서도 안정적으로 동작하도록 개선합니다.</p>
-                        <div class="about-metric">Error-safe Flow</div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-icon" aria-hidden="true">
-                            <i class="fa-solid fa-people-group"></i>
-                        </div>
-                        <h3>협업 지향 Collaboration</h3>
-                        <p>Swagger 문서화와 명확한 API 커뮤니케이션으로 프론트엔드·기획과 빠르게 협업하는 개발 문화를 지향합니다.</p>
-                        <div class="about-metric">Docs & Communication</div>
+                        <dl class="about-info-list">
+                            <div class="about-info-item">
+                                <dt class="about-key">이름 Name</dt>
+                                <dd class="about-value">구태호</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">포지션 Position</dt>
+                                <dd class="about-value">Backend Developer</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">소속 School</dt>
+                                <dd class="about-value">한국외국어대학교</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">전공 Major</dt>
+                                <dd class="about-value">컴퓨터공학과</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">졸업 Graduation</dt>
+                                <dd class="about-value">2026.03 졸업</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">관심 분야 Focus</dt>
+                                <dd class="about-value">API 설계 · 도메인 모델링 · 서비스 운영 안정성</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">어학/자격</dt>
+                                <dd class="about-value">OPIc IH · 영어토론대회 우승</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">연락 Contact</dt>
+                                <dd class="about-value">taehokoo82@gmail.com · github.com/kootaeho</dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">기술 스택 Skills</h2>
+            <div class="skills-overview" aria-label="기술 스택 카테고리">
+                <span class="skills-overview-item">Backend</span>
+                <span class="skills-overview-item">Database</span>
+                <span class="skills-overview-item">AI & API</span>
+                <span class="skills-overview-item">Authentication</span>
+                <span class="skills-overview-item">DevOps</span>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card skill-card--backend">
+                    <div class="skill-card-top">
+                        <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                        <span class="skill-chip">Core Stack</span>
+                    </div>
+                    <h3 class="skill-name">Backend</h3>
+                    <p class="skill-summary">서버 구조 설계와 API 구현의 중심이 되는 백엔드 기술입니다.</p>
+                    <ul class="skill-list">
+                        <li>TypeScript</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Prisma ORM</li>
+                    </ul>
+                </div>
+                <div class="skill-card skill-card--database">
+                    <div class="skill-card-top">
+                        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                        <span class="skill-chip">Data Layer</span>
+                    </div>
+                    <h3 class="skill-name">Database</h3>
+                    <p class="skill-summary">데이터 모델링과 저장 구조 설계에 사용한 기술들입니다.</p>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>ERD Cloud</li>
+                        <li>MySQL</li>
+                        <li>Supabase</li>
+                        <li>Database Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card skill-card--api">
+                    <div class="skill-card-top">
+                        <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <span class="skill-chip">Integration</span>
+                    </div>
+                    <h3 class="skill-name">AI & APIs</h3>
+                    <p class="skill-summary">외부 AI 서비스와 REST 기반 API 연동 경험입니다.</p>
+                    <ul class="skill-list">
+                        <li>OpenAI API</li>
+                        <li>RESTful API</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-card skill-card--auth">
+                    <div class="skill-card-top">
+                        <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span class="skill-chip">Security</span>
+                    </div>
+                    <h3 class="skill-name">Authentication</h3>
+                    <p class="skill-summary">인증, 인가, 보안 흐름 설계에 활용한 기술 스택입니다.</p>
+                    <ul class="skill-list">
+                        <li>JWT</li>
+                        <li>OAuth 2.0</li>
+                        <li>Security</li>
+                    </ul>
+                </div>
+                <div class="skill-card skill-card--ops">
+                    <div class="skill-card-top">
+                        <div class="skill-icon"><i class="fa-solid fa-gear"></i></div>
+                        <span class="skill-chip">Delivery</span>
+                    </div>
+                    <h3 class="skill-name">DevOps</h3>
+                    <p class="skill-summary">배포와 협업, 운영 과정에서 사용한 도구들입니다.</p>
+                    <ul class="skill-list">
+                        <li>Render</li>
+                        <li>Vercel</li>
+                        <li>Git/GitHub</li>
+                        <li>Swagger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certification Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">학력 · 교육 · 어학 · 자격</h2>
+
+            <!-- Group 1: 학력 & 교육 -->
+            <div class="education-group">
+                <div class="education-group-header">
+                    <div class="education-group-label-wrap">
+                        <span class="education-group-num">01</span>
+                        <div>
+                            <p class="education-group-label">Academic Background & Training</p>
+                            <h3 class="education-group-title">학력 · 교육</h3>
+                        </div>
+                    </div>
+                    <p class="education-group-desc">전공 기반 학업 이력과 실무형 백엔드 학습 과정입니다.</p>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card education-card--academic">
+                        <div class="education-card-top">
+                            <span class="education-chip">Academic</span>
+                            <span class="education-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+                        </div>
+                        <h3>학력 Academic Background</h3>
+                        <p class="education-summary">전공 기반 학업 이력과 전반적인 학업 성과입니다.</p>
+                        <ul>
+                            <li><strong>한국외국어대학교 컴퓨터공학과</strong> (2022.03 — 2026.03)</li>
+                            <li><strong>졸업</strong> · 학점 3.56</li>
+                        </ul>
+                    </article>
+                    <article class="education-card education-card--training">
+                        <div class="education-card-top">
+                            <span class="education-chip">Training</span>
+                            <span class="education-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+                        </div>
+                        <h3>교육 과정 Training</h3>
+                        <p class="education-summary">실무형 백엔드 학습과 팀 프로젝트 수행 경험입니다.</p>
+                        <ul>
+                            <li><strong>UMC Backend 파트 수료</strong> (2024.03 — 2025.02)</li>
+                            <li>Node.js · Express · DB 모델링 · API 설계 · 배포 중심 팀 프로젝트 수행</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Group Divider -->
+            <div class="education-group-divider" aria-hidden="true"></div>
+
+            <!-- Group 2: 어학 & 자격 -->
+            <div class="education-group">
+                <div class="education-group-header">
+                    <div class="education-group-label-wrap">
+                        <span class="education-group-num">02</span>
+                        <div>
+                            <p class="education-group-label">Language Proficiency & Certifications</p>
+                            <h3 class="education-group-title">어학 · 자격</h3>
+                        </div>
+                    </div>
+                    <p class="education-group-desc">어학 커뮤니케이션 역량과 공인 자격 이력입니다.</p>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card education-card--language">
+                        <div class="education-card-top">
+                            <span class="education-chip">Language</span>
+                            <span class="education-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></span>
+                        </div>
+                        <h3>어학 능력 Language Proficiency</h3>
+                        <p class="education-summary">커뮤니케이션 역량과 영어 활용 경험을 보여주는 이력입니다.</p>
+                        <ul>
+                            <li><strong>R-EIP(교내 회화 프로그램)</strong> 튜티 참여 후, <strong>유급 튜터</strong>로 선발되어 근무</li>
+                            <li>한국외국어대학교 외국어교육센터 주관 <strong>영어토론대회 우승</strong></li>
+                        </ul>
+                    </article>
+                    <article class="education-card education-card--certification">
+                        <div class="education-card-top">
+                            <span class="education-chip">Certification</span>
+                            <span class="education-icon" aria-hidden="true"><i class="fa-solid fa-award"></i></span>
+                        </div>
+                        <h3>자격 Certifications</h3>
+                        <p class="education-summary">공인 자격과 객관적으로 확인 가능한 성과입니다.</p>
+                        <ul>
+                            <li><strong>OPIc IH</strong> (공인 영어 회화 성적)</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -201,6 +392,7 @@
             <div class="project-card featured">
                 <div class="project-header">
                     <div>
+                        <p class="project-eyebrow">Project 01 · Featured Case Study</p>
                         <div class="project-title-row">
                             <img src="Wearly_logo.png" alt="Wearly 로고" class="project-logo">
                             <h3 class="project-title">Wearly</h3>
@@ -227,6 +419,39 @@
                     <div class="focus-item">
                             <div class="focus-label">결과 Result</div>
                         <p>업로드→분석→저장→추천→알림 흐름을 실제 배포 환경에서 검증했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="project-screenshots">
+                    <div class="project-section-head">
+                        <h4 class="screenshots-title">주요 화면 스크린샷</h4>
+                        <p class="screenshots-subtitle">영상 재생 없이도 서비스 흐름을 빠르게 이해할 수 있도록 핵심 화면을 배치하는 영역입니다.</p>
+                    </div>
+                    <div class="screenshots-grid">
+                        <figure class="screenshot-card screenshot-card--large">
+                            <div class="screenshot-stack">
+                                <img src="Wearly-홈화면.png" alt="Wearly 메인 홈 화면 1" class="screenshot-image screenshot-image--stack">
+                                <img src="Wearly-홈화면2.png" alt="Wearly 메인 홈 화면 2" class="screenshot-image screenshot-image--stack">
+                                <img src="Wearly-홈화면3.png" alt="Wearly 메인 홈 화면 3" class="screenshot-image screenshot-image--stack">
+                            </div>
+                            <figcaption class="screenshot-caption">메인 홈 또는 대표 대시보드 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <div class="screenshot-stack">
+                                <img src="Wearly-업로드1.png" alt="Wearly 의류 업로드 화면 1" class="screenshot-image screenshot-image--stack">
+                                <img src="Wearly-업로드2.png" alt="Wearly 의류 업로드 화면 2" class="screenshot-image screenshot-image--stack">
+                                <img src="Wearly-업로드3.png" alt="Wearly 의류 업로드 화면 3" class="screenshot-image screenshot-image--stack">
+                            </div>
+                            <figcaption class="screenshot-caption">의류 업로드 및 등록 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <img src="Wearly-업로드4.png" alt="Wearly AI 자동 분류 결과 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">AI 자동 분류 결과 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <img src="Wearly-코디.png" alt="Wearly 날씨 기반 코디 추천 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">날씨 기반 코디 추천 화면</figcaption>
+                        </figure>
                     </div>
                 </div>
 
@@ -309,6 +534,28 @@
                                 <li>이메일 인증, Google Auth, FCM 토큰 등 신규 요구사항을 Prisma 스키마·마이그레이션으로 안전하게 반영</li>
                                 <li>seed 스크립트로 초기 데이터 세팅을 자동화하고 로컬/운영 환경 간 동작을 검증</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-challenges">
+                    <h4 class="challenges-title">핵심 성능 개선 사례 (Problem → Solution → Result)</h4>
+                    <div class="challenges-grid">
+                        <div class="challenge-item">
+                            <div class="challenge-number">Problem</div>
+                            <p>이미지 업로드는 서비스 진입 시점에서 가장 자주 호출되는 핵심 API였고, 실패 시 전체 플로우 이탈로 이어질 위험이 있었습니다. 특히 피크 트래픽 구간에서 업로드 지연이 사용자 체감 품질 저하로 직결되었습니다.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">Solution</div>
+                            <p>업로드 API와 데이터 흐름 병목을 분석한 뒤, 이미지 후처리를 비동기 Job 파이프라인으로 분리하고 저장/응답 경로를 경량화했습니다. 동시에 업로드 소요시간을 계측해 배포 전후 성능 변화를 모니터링했습니다.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">Result</div>
+                            <p>이미지 업로드 API를 비동기 Job 기반으로 전환해 요청 응답시간(p95) 기준 약 80~95% 단축이 가능한 구조로 개선했습니다. 동일 시간대 처리 가능한 업로드 수를 늘려 트래픽 증가 상황에서도 응답 안정성을 확보했습니다.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-number">Stability</div>
+                            <p>Vision 분류 결과를 고정 카테고리 ID + strict JSON schema로 정규화해 파싱 실패/형식 불일치 오류를 유의미하게 줄였습니다. 완료시간 절대값보다 사용자 체감 응답 안정성과 피크 트래픽 대응성을 우선했습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -536,10 +783,15 @@
                 </div>
             </div>
 
+            <div class="project-separator" role="separator" aria-label="다음 프로젝트 구분선">
+                <span class="project-separator-line" aria-hidden="true"></span>
+            </div>
+
             <!-- Random Chat Project -->
-            <div class="project-card">
+            <div class="project-card project-card--secondary">
                 <div class="project-header">
                     <div>
+                        <p class="project-eyebrow">Project 02 · Real-time Messaging</p>
                         <div class="project-title-row">
                             <img src="Unknown_Logo.png" alt="Unknown 로고" class="project-logo project-logo-unknown">
                             <h3 class="project-title">Random Chat Application</h3>
@@ -565,6 +817,31 @@
                     <div class="focus-item">
                             <div class="focus-label">결과 Result</div>
                         <p>재연결·토큰 갱신·상태 분리로 세션 연속성과 유지보수성을 함께 개선했습니다.</p>
+                    </div>
+                </div>
+
+                <div class="project-screenshots">
+                    <div class="project-section-head">
+                        <h4 class="screenshots-title">주요 화면 스크린샷</h4>
+                        <p class="screenshots-subtitle">실제 서비스 화면이나 결과물을 보여주는 이미지 영역입니다. 인증 → 매칭 → 채팅 흐름 위주로 배치하면 좋습니다.</p>
+                    </div>
+                    <div class="screenshots-grid">
+                        <figure class="screenshot-card screenshot-card--large">
+                            <img src="언노운홈화면1.png" alt="Random Chat 메인 채팅 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">대표 채팅 화면 또는 메인 진입 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <img src="언노운이메일인증화면1.png" alt="Random Chat 대학 인증 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">대학 이메일 인증 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <img src="언노운랜덤채팅화면1.png" alt="Random Chat 랜덤 매칭 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">랜덤 매칭 또는 대기 화면</figcaption>
+                        </figure>
+                        <figure class="screenshot-card">
+                            <img src="언노운친구화면1.png" alt="Random Chat 친구 시스템 화면" class="screenshot-image">
+                            <figcaption class="screenshot-caption">친구 시스템 / 모달 / 상태 UI 화면</figcaption>
+                        </figure>
                     </div>
                 </div>
 
@@ -796,101 +1073,6 @@
         </div>
     </section>
 
-    <!-- Education & Certification Section -->
-    <section class="education" id="education">
-        <div class="container">
-            <h2 class="section-title section-title-nowrap">학력 · 교육 · 어학 · 자격 Education / Certification</h2>
-            <p class="section-subtitle">전공 기반 역량, 실무형 학습 과정, 어학 커뮤니케이션 역량, 공인 이력입니다.</p>
-            <div class="education-grid">
-                <article class="education-card">
-                    <h3>학력 Academic Background</h3>
-                    <ul>
-                        <li><strong>한국외국어대학교 컴퓨터공학과</strong> (2022.03 — 2026.03)</li>
-                        <li><strong>졸업</strong> · 학점 3.56</li>
-                    </ul>
-                </article>
-                <article class="education-card">
-                    <h3>교육 과정 Training</h3>
-                    <ul>
-                        <li><strong>UMC Backend 파트 수료</strong> (2024.03 — 2025.02)</li>
-                        <li>Node.js · Express · DB 모델링 · API 설계 · 배포 중심 팀 프로젝트 수행</li>
-                    </ul>
-                </article>
-                <article class="education-card">
-                    <h3>어학 능력 Language Proficiency</h3>
-                    <ul>
-                        <li><strong>R-EIP(교내 회화 프로그램)</strong> 튜티 참여 후, <strong>유급 튜터</strong>로 선발되어 근무</li>
-                        <li>한국외국어대학교 외국어교육센터 주관 <strong>영어토론대회 우승</strong></li>
-                    </ul>
-                </article>
-                <article class="education-card">
-                    <h3>자격 Certifications</h3>
-                    <ul>
-                        <li><strong>OPIc IH</strong> (공인 영어 회화 성적)</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">기술 스택 Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">Backend</div>
-                    <h3 class="skill-name">Backend</h3>
-                    <ul class="skill-list">
-                        <li>TypeScript</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Prisma ORM</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">DB</div>
-                    <h3 class="skill-name">Database</h3>
-                    <ul class="skill-list">
-                        <li>PostgreSQL</li>
-                        <li>ERD Cloud</li>
-                        <li>MySQL</li>
-                        <li>Supabase</li>
-                        <li>Database Design</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">API</div>
-                    <h3 class="skill-name">AI & APIs</h3>
-                    <ul class="skill-list">
-                        <li>OpenAI API</li>
-                        <li>RESTful API</li>
-                        <li>API Integration</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">Auth</div>
-                    <h3 class="skill-name">Authentication</h3>
-                    <ul class="skill-list">
-                        <li>JWT</li>
-                        <li>OAuth 2.0</li>
-                        <li>Security</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">Ops</div>
-                    <h3 class="skill-name">DevOps</h3>
-                    <ul class="skill-list">
-                        <li>Render</li>
-                        <li>Vercel</li>
-                        <li>Git/GitHub</li>
-                        <li>Swagger</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -924,6 +1106,18 @@
     </section>
 
     <!-- Footer -->
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="이미지 크게 보기" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="닫기">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="이전 이미지">&#8249;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="다음 이미지">&#8250;</button>
+        <div class="lightbox-inner">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-divider"></div>
@@ -931,13 +1125,13 @@
                 <div class="footer-col">
                     <h4>Portfolio</h4>
                     <a href="#about">소개</a>
+                    <a href="#education">학력/교육/어학/자격</a>
                     <a href="#experience">경험</a>
-                    <a href="#projects">프로젝트</a>
                 </div>
                 <div class="footer-col">
                     <h4>Profile</h4>
-                    <a href="#education">학력/교육/어학/자격</a>
                     <a href="#skills">기술 스택</a>
+                    <a href="#projects">프로젝트</a>
                     <a href="#contact">연락처</a>
                 </div>
                 <div class="footer-col">

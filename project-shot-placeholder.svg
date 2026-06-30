@@ -1,0 +1,12 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" rx="36" fill="#F2F3F6"/>
+  <rect x="36" y="36" width="1208" height="728" rx="28" stroke="#D7DAE0" stroke-width="2"/>
+  <rect x="110" y="132" width="1060" height="72" rx="20" fill="#E2E6EC"/>
+  <rect x="110" y="244" width="420" height="300" rx="26" fill="#D6DCE6"/>
+  <rect x="570" y="244" width="600" height="140" rx="26" fill="#E6EAF0"/>
+  <rect x="570" y="404" width="600" height="140" rx="26" fill="#E6EAF0"/>
+  <rect x="110" y="584" width="1060" height="80" rx="22" fill="#EAEDEF"/>
+  <path d="M250 395L327 319L383 375L438 321L511 395" stroke="#F8FAFC" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="347" cy="315" r="28" fill="#F8FAFC"/>
+  <text x="640" y="714" text-anchor="middle" fill="#69717D" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">PROJECT SCREENSHOT</text>
+</svg>

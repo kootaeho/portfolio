@@ -98,7 +98,6 @@
                         <div class="about-info-head">
                             <p class="about-info-eyebrow">Basic Profile</p>
                             <h3 class="about-info-title">구태호 <span>Backend Developer</span></h3>
-                            <p class="about-info-description">포트폴리오 초반에서 빠르게 파악할 수 있도록 핵심 기본정보를 정리했습니다.</p>
                         </div>
                         <dl class="about-info-list">
                             <div class="about-info-item">
@@ -110,12 +109,8 @@
                                 <dd class="about-value">Backend Developer</dd>
                             </div>
                             <div class="about-info-item">
-                                <dt class="about-key">소속 School</dt>
-                                <dd class="about-value">한국외국어대학교</dd>
-                            </div>
-                            <div class="about-info-item">
-                                <dt class="about-key">전공 Major</dt>
-                                <dd class="about-value">컴퓨터공학과</dd>
+                                <dt class="about-key">학교 · 전공</dt>
+                                <dd class="about-value">한국외국어대학교 컴퓨터공학과</dd>
                             </div>
                             <div class="about-info-item">
                                 <dt class="about-key">졸업 Graduation</dt>
@@ -123,7 +118,11 @@
                             </div>
                             <div class="about-info-item">
                                 <dt class="about-key">관심 분야 Focus</dt>
-                                <dd class="about-value">API 설계 · 도메인 모델링 · 서비스 운영 안정성</dd>
+                                <dd class="about-value">백엔드 API 설계 · 도메인 모델링 · DB 구조 최적화 · 실서비스 운영 안정성</dd>
+                            </div>
+                            <div class="about-info-item">
+                                <dt class="about-key">핵심 기술</dt>
+                                <dd class="about-value">TypeScript · Node.js · Express · PostgreSQL · Prisma</dd>
                             </div>
                             <div class="about-info-item">
                                 <dt class="about-key">어학/자격</dt>
@@ -131,7 +130,7 @@
                             </div>
                             <div class="about-info-item">
                                 <dt class="about-key">연락 Contact</dt>
-                                <dd class="about-value">taehokoo82@gmail.com · github.com/kootaeho</dd>
+                                <dd class="about-value">taehokoo82@gmail.com · 010-6248-3654 · github.com/kootaeho</dd>
                             </div>
                         </dl>
                     </div>
@@ -419,6 +418,78 @@
                     <div class="focus-item">
                             <div class="focus-label">결과 Result</div>
                         <p>업로드→분석→저장→추천→알림 흐름을 실제 배포 환경에서 검증했습니다.</p>
+                    </div>
+                </div>
+
+                <!-- Metrics Visualization -->
+                <div class="project-metrics">
+                    <div class="metrics-stats-row">
+                        <div class="metric-stat">
+                            <span class="metric-num">80<span class="metric-unit">~95%</span></span>
+                            <span class="metric-label">응답시간 단축</span>
+                            <span class="metric-sub">업로드 API p95 기준 · 비동기 Job 전환 후</span>
+                        </div>
+                        <div class="metric-stat">
+                            <span class="metric-num">5<span class="metric-unit">단계</span></span>
+                            <span class="metric-label">처리 파이프라인</span>
+                            <span class="metric-sub">업로드 → 분석 → 저장 → 추천 → 알림</span>
+                        </div>
+                        <div class="metric-stat">
+                            <span class="metric-num">3<span class="metric-unit">개</span></span>
+                            <span class="metric-label">주도 설계 도메인</span>
+                            <span class="metric-sub">인증 · 의류등록 · DB 스키마</span>
+                        </div>
+                    </div>
+
+                    <div class="perf-chart">
+                        <p class="metrics-section-label"><i class="fa-solid fa-chart-bar"></i> 업로드 API 응답시간 개선 (p95 기준 · 구조 기준 추정값)</p>
+                        <div class="perf-bar-group">
+                            <div class="perf-bar-row">
+                                <span class="perf-label">Before</span>
+                                <div class="perf-track">
+                                    <div class="perf-fill perf-fill--before" style="width:100%">
+                                        <span class="perf-fill-label">동기 처리 · ~2,000ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="perf-bar-row">
+                                <span class="perf-label">After</span>
+                                <div class="perf-track">
+                                    <div class="perf-fill perf-fill--after" style="width:10%"></div>
+                                    <span class="perf-after-label">비동기 Job · ~200ms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contrib-chart">
+                        <p class="metrics-section-label"><i class="fa-solid fa-user-check"></i> 기여 영역 Contribution Breakdown</p>
+                        <div class="contrib-rows">
+                            <div class="contrib-row">
+                                <span class="contrib-name">인증 플로우 설계</span>
+                                <div class="contrib-track">
+                                    <div class="contrib-fill" style="--contrib-w: 93%"><span class="contrib-badge">단독 설계</span></div>
+                                </div>
+                            </div>
+                            <div class="contrib-row">
+                                <span class="contrib-name">의류 등록 도메인 API</span>
+                                <div class="contrib-track">
+                                    <div class="contrib-fill" style="--contrib-w: 88%"><span class="contrib-badge">주도</span></div>
+                                </div>
+                            </div>
+                            <div class="contrib-row">
+                                <span class="contrib-name">DB 스키마 확장</span>
+                                <div class="contrib-track">
+                                    <div class="contrib-fill" style="--contrib-w: 85%"><span class="contrib-badge">주도</span></div>
+                                </div>
+                            </div>
+                            <div class="contrib-row">
+                                <span class="contrib-name">AI 응답 정규화 파이프라인</span>
+                                <div class="contrib-track">
+                                    <div class="contrib-fill" style="--contrib-w: 70%"><span class="contrib-badge">참여</span></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -817,6 +888,57 @@
                     <div class="focus-item">
                             <div class="focus-label">결과 Result</div>
                         <p>재연결·토큰 갱신·상태 분리로 세션 연속성과 유지보수성을 함께 개선했습니다.</p>
+                    </div>
+                </div>
+
+                <!-- Metrics Visualization -->
+                <div class="project-metrics">
+                    <div class="metrics-stats-row">
+                        <div class="metric-stat">
+                            <span class="metric-num">5<span class="metric-unit">회</span></span>
+                            <span class="metric-label">자동 재연결</span>
+                            <span class="metric-sub">Socket.IO 연결 끊김 시 자동 복구</span>
+                        </div>
+                        <div class="metric-stat">
+                            <span class="metric-num">1<span class="metric-unit">분 전</span></span>
+                            <span class="metric-label">JWT 사전 갱신</span>
+                            <span class="metric-sub">만료 60초 전 자동 액세스 토큰 재발급</span>
+                        </div>
+                        <div class="metric-stat">
+                            <span class="metric-num">473<span class="metric-unit">→6</span></span>
+                            <span class="metric-label">모듈 리팩토링</span>
+                            <span class="metric-sub">단일 파일 → 6개 책임 모듈 분리</span>
+                        </div>
+                    </div>
+
+                    <div class="refactor-chart">
+                        <p class="metrics-section-label"><i class="fa-solid fa-code-branch"></i> 코드 구조 개선 Before → After</p>
+                        <div class="refactor-comparison">
+                            <div class="refactor-side refactor-side--before">
+                                <span class="refactor-tag refactor-tag--before">Before</span>
+                                <div class="refactor-mono-file">
+                                    <i class="fa-solid fa-file-code"></i>
+                                    <span class="refactor-filename">app.js</span>
+                                    <span class="refactor-linecount">473줄</span>
+                                </div>
+                                <p class="refactor-desc">모든 로직이 단일 파일에 집중<br>수정·테스트 어려움</p>
+                            </div>
+                            <div class="refactor-arrow-col">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                            <div class="refactor-side refactor-side--after">
+                                <span class="refactor-tag refactor-tag--after">After</span>
+                                <div class="refactor-module-grid">
+                                    <div class="refactor-module-chip">auth</div>
+                                    <div class="refactor-module-chip">socket</div>
+                                    <div class="refactor-module-chip">chat</div>
+                                    <div class="refactor-module-chip">user</div>
+                                    <div class="refactor-module-chip">match</div>
+                                    <div class="refactor-module-chip">utils</div>
+                                </div>
+                                <p class="refactor-desc">6개 책임 단위로 분리 · 총 738줄<br>유지보수성 · 테스트 용이성 향상</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

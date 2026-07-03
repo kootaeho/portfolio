@@ -425,9 +425,9 @@
                 <div class="project-metrics">
                     <div class="metrics-stats-row">
                         <div class="metric-stat">
-                            <span class="metric-num">80<span class="metric-unit">~95%</span></span>
-                            <span class="metric-label">응답시간 단축</span>
-                            <span class="metric-sub">업로드 API p95 기준 · 비동기 Job 전환 후</span>
+                            <span class="metric-num">390<span class="metric-unit">ms</span></span>
+                            <span class="metric-label">업로드 API p95 응답시간</span>
+                            <span class="metric-sub">k6 실측 · 5 VUs · 202회 · 성공률 100%</span>
                         </div>
                         <div class="metric-stat">
                             <span class="metric-num">5<span class="metric-unit">단계</span></span>
@@ -442,21 +442,21 @@
                     </div>
 
                     <div class="perf-chart">
-                        <p class="metrics-section-label"><i class="fa-solid fa-chart-bar"></i> 업로드 API 응답시간 개선 (p95 기준 · 구조 기준 추정값)</p>
+                        <p class="metrics-section-label"><i class="fa-solid fa-chart-bar"></i> 업로드 API 응답시간 개선 (POST /api/upload/clothing-async · k6 실측)</p>
                         <div class="perf-bar-group">
                             <div class="perf-bar-row">
                                 <span class="perf-label">Before</span>
                                 <div class="perf-track">
                                     <div class="perf-fill perf-fill--before" style="width:100%">
-                                        <span class="perf-fill-label">동기 처리 · ~2,000ms</span>
+                                        <span class="perf-fill-label">동기 처리 · ~2,000ms (추정)</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="perf-bar-row">
                                 <span class="perf-label">After</span>
                                 <div class="perf-track">
-                                    <div class="perf-fill perf-fill--after" style="width:10%"></div>
-                                    <span class="perf-after-label">비동기 Job · ~200ms</span>
+                                    <div class="perf-fill perf-fill--after" style="width:20%"></div>
+                                    <span class="perf-after-label">비동기 Job · p95 390ms · avg 344ms · 성공률 100% (k6 실측)</span>
                                 </div>
                             </div>
                         </div>
@@ -622,7 +622,11 @@
                         </div>
                         <div class="challenge-item">
                             <div class="challenge-number">Result</div>
-                            <p>이미지 업로드 API를 비동기 Job 기반으로 전환해 요청 응답시간(p95) 기준 약 80~95% 단축이 가능한 구조로 개선했습니다. 동일 시간대 처리 가능한 업로드 수를 늘려 트래픽 증가 상황에서도 응답 안정성을 확보했습니다.</p>
+                            <p>
+                                비동기 Job 파이프라인 전환 후 <code>POST /api/upload/clothing-async</code>를 k6 부하 테스트로 실측했습니다.<br>
+                                5 VUs · 1분 30초 · 202회 반복 기준, <strong>p95 응답시간 390ms</strong>(목표 500ms 이하 ✓), <strong>성공률 100%</strong>(202/202), avg 344ms · med 325ms · p90 354ms를 기록했습니다.<br>
+                                동기 처리 대비 사용자 체감 응답이 즉시 반환(202 Accepted)되어 업로드 플로우 이탈 위험을 제거했습니다.
+                            </p>
                         </div>
                         <div class="challenge-item">
                             <div class="challenge-number">Stability</div>

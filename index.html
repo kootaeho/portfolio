@@ -425,9 +425,9 @@
                 <div class="project-metrics">
                     <div class="metrics-stats-row">
                         <div class="metric-stat">
-                            <span class="metric-num">390<span class="metric-unit">ms</span></span>
-                            <span class="metric-label">업로드 API p95 응답시간</span>
-                            <span class="metric-sub">k6 실측 · 5 VUs · 202회 · 성공률 100%</span>
+                            <span class="metric-num">97<span class="metric-unit">%</span></span>
+                            <span class="metric-label">업로드 API 응답시간 단축</span>
+                            <span class="metric-sub">avg 11s → 344ms · k6 실측 비교</span>
                         </div>
                         <div class="metric-stat">
                             <span class="metric-num">5<span class="metric-unit">단계</span></span>
@@ -442,20 +442,20 @@
                     </div>
 
                     <div class="perf-chart">
-                        <p class="metrics-section-label"><i class="fa-solid fa-chart-bar"></i> 업로드 API 응답시간 개선 (POST /api/upload/clothing-async · k6 실측)</p>
+                        <p class="metrics-section-label"><i class="fa-solid fa-chart-bar"></i> 업로드 API 응답시간 개선 (k6 실측 Before vs After)</p>
                         <div class="perf-bar-group">
                             <div class="perf-bar-row">
                                 <span class="perf-label">Before</span>
                                 <div class="perf-track">
                                     <div class="perf-fill perf-fill--before" style="width:100%">
-                                        <span class="perf-fill-label">동기 처리 · ~2,000ms (추정)</span>
+                                        <span class="perf-fill-label">동기 처리 · avg ~11s (k6 측정)</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="perf-bar-row">
                                 <span class="perf-label">After</span>
                                 <div class="perf-track">
-                                    <div class="perf-fill perf-fill--after" style="width:20%"></div>
+                                    <div class="perf-fill perf-fill--after" style="width:3%"></div>
                                     <span class="perf-after-label">비동기 Job · p95 390ms · avg 344ms · 성공률 100% (k6 실측)</span>
                                 </div>
                             </div>
@@ -464,30 +464,26 @@
 
                     <div class="contrib-chart">
                         <p class="metrics-section-label"><i class="fa-solid fa-user-check"></i> 기여 영역 Contribution Breakdown</p>
-                        <div class="contrib-rows">
-                            <div class="contrib-row">
-                                <span class="contrib-name">인증 플로우 설계</span>
-                                <div class="contrib-track">
-                                    <div class="contrib-fill" style="--contrib-w: 93%"><span class="contrib-badge">단독 설계</span></div>
-                                </div>
+                        <div class="contrib-cards">
+                            <div class="contrib-card">
+                                <span class="contrib-card-icon"><i class="fa-solid fa-lock"></i></span>
+                                <span class="contrib-card-name">인증 플로우 설계</span>
+                                <span class="contrib-card-role role--solo">단독 설계</span>
                             </div>
-                            <div class="contrib-row">
-                                <span class="contrib-name">의류 등록 도메인 API</span>
-                                <div class="contrib-track">
-                                    <div class="contrib-fill" style="--contrib-w: 88%"><span class="contrib-badge">주도</span></div>
-                                </div>
+                            <div class="contrib-card">
+                                <span class="contrib-card-icon"><i class="fa-solid fa-shirt"></i></span>
+                                <span class="contrib-card-name">의류 등록 도메인 API</span>
+                                <span class="contrib-card-role role--lead">주도</span>
                             </div>
-                            <div class="contrib-row">
-                                <span class="contrib-name">DB 스키마 확장</span>
-                                <div class="contrib-track">
-                                    <div class="contrib-fill" style="--contrib-w: 85%"><span class="contrib-badge">주도</span></div>
-                                </div>
+                            <div class="contrib-card">
+                                <span class="contrib-card-icon"><i class="fa-solid fa-database"></i></span>
+                                <span class="contrib-card-name">DB 스키마 확장</span>
+                                <span class="contrib-card-role role--lead">주도</span>
                             </div>
-                            <div class="contrib-row">
-                                <span class="contrib-name">AI 응답 정규화 파이프라인</span>
-                                <div class="contrib-track">
-                                    <div class="contrib-fill" style="--contrib-w: 70%"><span class="contrib-badge">참여</span></div>
-                                </div>
+                            <div class="contrib-card">
+                                <span class="contrib-card-icon"><i class="fa-solid fa-robot"></i></span>
+                                <span class="contrib-card-name">AI 응답 정규화 파이프라인</span>
+                                <span class="contrib-card-role role--part">참여</span>
                             </div>
                         </div>
                     </div>
@@ -538,17 +534,6 @@
                                 <li>Supabase Postgres + Storage</li>
                                 <li>Scheduler + FCM Push</li>
                             </ul>
-                        </div>
-                        <div class="architecture-card">
-                            <h5>요청 흐름 Main Request Flow</h5>
-                            <ol>
-                                <li>사용자 업로드 요청 수신 및 인증 검증</li>
-                                <li>이미지 원본 Storage 저장</li>
-                                <li>Vision 분석 호출 후 응답 스키마 검증</li>
-                                <li>정규화된 메타데이터를 DB에 저장</li>
-                                <li>날씨 데이터와 매칭하여 추천 결과 생성</li>
-                                <li>스케줄 기반 푸시 알림으로 추천 전달</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
@@ -623,9 +608,10 @@
                         <div class="challenge-item">
                             <div class="challenge-number">Result</div>
                             <p>
-                                비동기 Job 파이프라인 전환 후 <code>POST /api/upload/clothing-async</code>를 k6 부하 테스트로 실측했습니다.<br>
-                                5 VUs · 1분 30초 · 202회 반복 기준, <strong>p95 응답시간 390ms</strong>(목표 500ms 이하 ✓), <strong>성공률 100%</strong>(202/202), avg 344ms · med 325ms · p90 354ms를 기록했습니다.<br>
-                                동기 처리 대비 사용자 체감 응답이 즉시 반환(202 Accepted)되어 업로드 플로우 이탈 위험을 제거했습니다.
+                                k6로 동기·비동기 엔드포인트를 각각 실측해 전후를 비교했습니다.<br>
+                                <strong>Before (동기)</strong>: avg <strong>~11s</strong> — 동기 처리로 인한 응답 지연.<br>
+                                <strong>After (비동기)</strong>: p95 <strong>390ms</strong>(목표 500ms ✓), 성공률 <strong>100%</strong>(202/202), avg 344ms · med 325ms · p90 354ms — 5 VUs · 202회 반복.<br>
+                                응답시간 약 <strong>97% 단축</strong>(avg 11s → 344ms), 업로드 플로우 이탈 위험 완전 제거.
                             </p>
                         </div>
                         <div class="challenge-item">
@@ -783,49 +769,6 @@
                         <div class="challenge-item">
                             <div class="challenge-number">04</div>
                             <p>OpenWeatherMap 실시간/예보 데이터를 활용해 지역·시간대별 체감 온도와 의류 속성(두께·계절감)을 매칭하는 추천 가중치 튜닝</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-quality-grid">
-                    <div class="quality-card">
-                        <h4 class="quality-title">예외 처리 & 운영 안정성</h4>
-                        <ul>
-                            <li>OpenAI 응답 형식 불일치를 스키마 검증으로 차단하고, 실패 케이스를 재요청·로그로 분리</li>
-                            <li>JWT Access/Refresh + OAuth를 단일 인증 흐름으로 통합해 토큰/권한 누락 리스크 감소</li>
-                            <li>이미지 원본과 메타데이터를 분리 저장해 대량 업로드 시 API 병목을 완화</li>
-                            <li>미들웨어 공통화로 신규 엔드포인트 추가 시 인증·검증 로직 누락 방지</li>
-                        </ul>
-                    </div>
-                    <div class="quality-card">
-                        <h4 class="quality-title">사용자 경험 품질(Backend 관점)</h4>
-                        <ul>
-                            <li>분석·추천 파이프라인을 분리하여 실패 지점을 명확히 관리하고 사용자 오류 체감 최소화</li>
-                            <li>날씨/시간대 기반 추천 가중치로 사용자가 체감하는 추천 정확도를 개선</li>
-                            <li>FCM 스케줄링으로 사용자가 필요한 시점에 코디 추천을 전달</li>
-                            <li>Swagger 문서화를 통해 프론트-백엔드 협업 속도와 API 사용 일관성 향상</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-metrics">
-                    <h4 class="metrics-title">아키텍처 관점 핵심 포인트</h4>
-                    <div class="metrics-grid">
-                        <div class="metric-item">
-                            <span class="metric-key">Domain Layers</span>
-                            <span class="metric-value">Controller · Service · Repository 분리</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-key">Data Policy</span>
-                            <span class="metric-value">Image(Storage) / Metadata(DB) 분리</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-key">Reliability</span>
-                            <span class="metric-value">AI 응답 검증 + 실패 흐름 분리</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-key">Scale Readiness</span>
-                            <span class="metric-value">스케줄러/알림/추천 책임 분리 구조</span>
                         </div>
                     </div>
                 </div>

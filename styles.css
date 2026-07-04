@@ -1693,6 +1693,63 @@ button:focus-visible {
     white-space: nowrap;
 }
 
+/* Contribution Cards */
+.contrib-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.contrib-card {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contrib-card-icon {
+    font-size: 20px;
+    color: var(--project-accent);
+    line-height: 1;
+}
+
+.contrib-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 1.4;
+    flex: 1;
+}
+
+.contrib-card-role {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+.role--solo {
+    background: var(--project-accent);
+    color: #fff;
+}
+
+.role--lead {
+    background: color-mix(in srgb, var(--project-accent) 20%, transparent);
+    color: var(--project-accent);
+}
+
+.role--part {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--text-secondary, #888);
+}
+
 /* Refactoring Before/After */
 .refactor-comparison {
     display: grid;

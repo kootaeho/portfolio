@@ -1458,6 +1458,437 @@ button:focus-visible {
     line-height: 1.7;
 }
 
+/* ========== Troubleshooting Section ========== */
+.project-troubleshoot {
+    margin-bottom: 40px;
+}
+
+.troubleshoot-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.troubleshoot-intro {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+/* Case block */
+.ts-case {
+    background: var(--project-panel-bg);
+    border: 1px solid var(--project-panel-border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.ts-case-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.ts-badge-num {
+    display: inline-block;
+    background: var(--project-accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    margin-top: 3px;
+    letter-spacing: 0.03em;
+}
+
+.ts-case-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ts-case-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.ts-case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ts-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--project-accent);
+    background: color-mix(in srgb, var(--project-accent) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--project-accent) 25%, transparent);
+    padding: 2px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Compare layout: Before / After side by side */
+.ts-compare-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.ts-compare-arrow {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--project-accent);
+    align-self: center;
+    padding: 0 4px;
+    margin-top: 36px;
+}
+
+/* Panel */
+.ts-panel {
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1.5px solid transparent;
+}
+
+.ts-panel--before {
+    background: rgba(200, 30, 30, 0.04);
+    border-color: rgba(200, 30, 30, 0.14);
+}
+
+.ts-panel--after {
+    background: rgba(30, 140, 90, 0.04);
+    border-color: rgba(30, 140, 90, 0.16);
+}
+
+.ts-panel-head {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.ts-panel--before .ts-panel-head {
+    color: #b83030;
+}
+
+.ts-panel--after .ts-panel-head {
+    color: #1d8a55;
+}
+
+/* Flow column */
+.ts-flow-col {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* Flow node */
+.ts-fnode {
+    background: #fff;
+    border: 1px solid var(--project-panel-border);
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: var(--text-color);
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.ts-fnode small {
+    font-size: 11px;
+    color: var(--text-light);
+    display: block;
+    width: 100%;
+}
+
+.ts-fnode--ok {
+    border-color: rgba(30, 140, 90, 0.3);
+    background: rgba(30, 140, 90, 0.05);
+    color: #1b6e40;
+}
+
+.ts-fnode--bad {
+    border-color: rgba(200, 30, 30, 0.3);
+    background: rgba(200, 30, 30, 0.05);
+    color: #a02020;
+}
+
+.ts-fnode--warn {
+    border-color: rgba(195, 110, 0, 0.3);
+    background: rgba(195, 110, 0, 0.05);
+    color: #935200;
+}
+
+.ts-fnode--decision {
+    border-color: var(--project-panel-border);
+    background: color-mix(in srgb, var(--project-accent) 8%, #fff);
+    color: var(--text-color);
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+}
+
+.ts-decision-icon {
+    color: var(--project-accent);
+    font-size: 11px;
+    margin-right: 3px;
+}
+
+.ts-fnode-sub {
+    font-size: 11px;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.5;
+    padding: 4px 0;
+}
+
+/* Arrow between nodes */
+.ts-farrow {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+    padding: 2px 0;
+    line-height: 1;
+}
+
+.ts-farrow--retry {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--project-accent);
+    border-top: 1px dashed var(--project-panel-border);
+    border-bottom: 1px dashed var(--project-panel-border);
+    padding: 5px 0;
+    margin: 4px 0;
+    text-align: center;
+}
+
+/* Pills inside nodes */
+.ts-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 20px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+.ts-pill--ok {
+    background: rgba(30, 140, 90, 0.12);
+    color: #1b6e40;
+    border: 1px solid rgba(30, 140, 90, 0.2);
+}
+
+.ts-pill--bad {
+    background: rgba(200, 30, 30, 0.1);
+    color: #a02020;
+    border: 1px solid rgba(200, 30, 30, 0.2);
+}
+
+.ts-pill--warn {
+    background: rgba(195, 110, 0, 0.1);
+    color: #935200;
+    border: 1px solid rgba(195, 110, 0, 0.2);
+}
+
+/* Branch split */
+.ts-branch-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.ts-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.ts-branch-label {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+}
+
+.ts-branch-label--yes {
+    background: rgba(30, 140, 90, 0.12);
+    color: #1b6e40;
+}
+
+.ts-branch-label--no {
+    background: rgba(200, 30, 30, 0.1);
+    color: #a02020;
+}
+
+/* Insight note */
+.ts-insight {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: color-mix(in srgb, var(--project-accent) 7%, #fff);
+    border: 1px solid color-mix(in srgb, var(--project-accent) 20%, transparent);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+.ts-insight code {
+    font-size: 11.5px;
+    background: color-mix(in srgb, var(--project-accent) 12%, transparent);
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: var(--project-accent);
+}
+
+.ts-insight-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Implementation steps */
+.ts-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.ts-step {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: color-mix(in srgb, var(--project-accent) 5%, #fff);
+    border: 1px solid var(--project-panel-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.ts-step-num {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--project-accent);
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.ts-step-file {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--project-accent);
+    background: color-mix(in srgb, var(--project-accent) 10%, transparent);
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.ts-step p {
+    font-size: 12.5px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ts-step code {
+    font-size: 11.5px;
+    background: rgba(0,0,0,0.06);
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    word-break: break-all;
+}
+
+/* Result table (Problem 4) */
+.ts-result-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--project-panel-border);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.ts-result-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    background: color-mix(in srgb, var(--project-accent) 10%, transparent);
+    padding: 9px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--project-accent);
+}
+
+.ts-result-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 10px 16px;
+    border-top: 1px solid var(--project-panel-border);
+    background: var(--project-panel-alt-bg);
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.ts-result-row:nth-child(odd) {
+    background: #fff;
+}
+
+.ts-result-ok {
+    color: #1b6e40;
+    font-weight: 500;
+}
+
+/* Responsive: stack compare panels on small screens */
+@media (max-width: 700px) {
+    .ts-compare-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .ts-compare-arrow {
+        text-align: center;
+        margin-top: 0;
+        transform: rotate(90deg);
+    }
+
+    .ts-result-head,
+    .ts-result-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
 /* Reliability & UX Quality */
 .project-quality-grid {
     display: grid;

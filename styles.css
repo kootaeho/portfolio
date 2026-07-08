@@ -508,6 +508,11 @@ button:focus-visible {
     word-break: keep-all;
 }
 
+.text-emphasis {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
 /* ========== Experience Section ========== */
 .experience {
     background: transparent;
@@ -2075,114 +2080,6 @@ button:focus-visible {
     white-space: nowrap;
 }
 
-/* Contribution Bars */
-.contrib-rows {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contrib-row {
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    align-items: center;
-    gap: 14px;
-}
-
-.contrib-name {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-color);
-    text-align: right;
-    line-height: 1.4;
-}
-
-.contrib-track {
-    height: 28px;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 7px;
-    overflow: hidden;
-    position: relative;
-}
-
-.contrib-fill {
-    height: 100%;
-    width: var(--contrib-w, 50%);
-    background: linear-gradient(90deg, var(--project-accent) 0%, color-mix(in srgb, var(--project-accent) 55%, white) 100%);
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-    transition: width 1s cubic-bezier(.4,0,.2,1);
-}
-
-.contrib-badge {
-    font-size: 10px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-/* Contribution Cards */
-.contrib-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.contrib-card {
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    border-radius: 12px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contrib-card-icon {
-    font-size: 20px;
-    color: var(--project-accent);
-    line-height: 1;
-}
-
-.contrib-card-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-color);
-    line-height: 1.4;
-    flex: 1;
-}
-
-.contrib-card-role {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 20px;
-    align-self: flex-start;
-}
-
-.role--solo {
-    background: var(--project-accent);
-    color: #fff;
-}
-
-.role--lead {
-    background: color-mix(in srgb, var(--project-accent) 20%, transparent);
-    color: var(--project-accent);
-}
-
-.role--part {
-    background: rgba(0, 0, 0, 0.06);
-    color: var(--text-secondary, #888);
-}
-
 /* Refactoring Before/After */
 .refactor-comparison {
     display: grid;
@@ -2302,13 +2199,6 @@ button:focus-visible {
 @media (max-width: 640px) {
     .metrics-stats-row {
         grid-template-columns: 1fr;
-    }
-    .contrib-row {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
-    .contrib-name {
-        text-align: left;
     }
     .refactor-comparison {
         grid-template-columns: 1fr;

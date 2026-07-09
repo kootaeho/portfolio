@@ -75,15 +75,6 @@ const updateActiveNavLink = () => {
 window.addEventListener('scroll', updateActiveNavLink);
 updateActiveNavLink();
 
-// Tech tag click effect (optional: can be used for filtering in the future)
-const techTags = document.querySelectorAll('.tech-tag');
-techTags.forEach(tag => {
-    tag.addEventListener('click', function() {
-        console.log('Tech clicked:', this.textContent);
-        // Can add filtering functionality here in the future
-    });
-});
-
 // ========== Lightbox ==========
 (function () {
     const lightbox      = document.getElementById('lightbox');
@@ -173,11 +164,6 @@ techTags.forEach(tag => {
         if (Math.abs(dx) > 50) dx < 0 ? show(current + 1) : show(current - 1);
     }, { passive: true });
 }());
-
-// Console welcome message
-console.log('%c안녕하세요! 👋', 'color: #2563eb; font-size: 20px; font-weight: bold;');
-console.log('%c포트폴리오를 봐주셔서 감사합니다.', 'color: #64748b; font-size: 14px;');
-console.log('%c소스 코드가 궁금하신가요? GitHub에서 확인하실 수 있습니다!', 'color: #64748b; font-size: 14px;');
 
 // Hamburger menu toggle
 const navToggle = document.querySelector('.nav-toggle');

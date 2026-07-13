@@ -665,19 +665,15 @@
                     <div class="challenges-grid">
                         <div class="challenge-item">
                             <div class="challenge-number">01</div>
-                            <p>가변적인 OpenAI Vision 응답 포맷을 스키마 기반으로 파싱·검증해, 실패 응답은 재요청·로그로 분리하는 안정적인 안전망 설계</p>
+                            <p>OpenAI Vision의 자유형 응답을 도메인에서 다루기 위해 strict JSON schema + 고정 카테고리 매핑 규칙을 정의해 파싱 안정성과 데이터 일관성을 확보</p>
                         </div>
                         <div class="challenge-item">
                             <div class="challenge-number">02</div>
-                            <p>상의·하의·아우터·악세사리 등 복수 아이템으로 구성된 Outfit을 다대다 관계와 태그(계절·스타일) 모델로 표현해 확장 가능한 데이터 구조 설계</p>
+                            <p>상의·하의·아우터·악세사리 조합을 Outfit 중심으로 모델링하고, 다대다 관계 + 계절/스타일 태그 체계를 설계해 추천 확장에 유연한 스키마 구성</p>
                         </div>
                         <div class="challenge-item">
                             <div class="challenge-number">03</div>
-                            <p>의류 이미지 원본은 Supabase Storage에, 메타데이터는 DB에 분리 저장하여 대량 업로드 시에도 API 응답 지연을 최소화</p>
-                        </div>
-                        <div class="challenge-item">
-                            <div class="challenge-number">04</div>
-                            <p>OpenWeatherMap 실시간/예보 데이터를 활용해 지역·시간대별 체감 온도와 의류 속성(두께·계절감)을 매칭하는 추천 가중치 튜닝</p>
+                            <p>이미지 원본(Storage)과 메타데이터(DB)를 분리하고 업로드 이후 처리 단계를 비동기화해, 피크 구간에서도 API 응답 경로를 경량화하도록 구조 재편</p>
                         </div>
                     </div>
                 </div>
@@ -685,7 +681,7 @@
                 <!-- Troubleshooting Deep Dives -->
                 <div class="project-troubleshoot">
                     <h4 class="troubleshoot-title">트러블슈팅 심층 분석 (Problem → Flow → Solution)</h4>
-                    <p class="troubleshoot-intro">실제 개발 중 맞닥뜨린 운영·설계 문제와 구조적 해결 방법을 플로우로 시각화했습니다.</p>
+                    <p class="troubleshoot-intro">위 기술적 도전 중 실제 운영에서 영향도가 가장 컸던 2건(재시도 비용·중복 저장)을 선정해, 문제 재현 흐름과 해결 구조를 상세히 정리했습니다.</p>
 
                     <!-- Problem 1: 누끼 API 재호출 방지 -->
                     <div class="ts-case">
@@ -878,7 +874,7 @@
                     <a href="https://github.com/Melonging/wearly-backend" target="_blank" rel="noopener" class="project-link-btn">
                         Wearly Backend GitHub <span class="project-link-note">Private</span>
                     </a>
-                    <a href="https://github.com/Melonging/wearly-frontend.git" target="_blank" rel="noopener" class="project-link-btn">
+                    <a href="https://github.com/Wearly-Team/wearly-android.git" target="_blank" rel="noopener" class="project-link-btn">
                         Wearly Frontend GitHub <span class="project-link-note">Private</span>
                     </a>
                     <a href="https://www.notion.so/Wearly-2d3183d0d46c803583c8dbe2f5aa65df" target="_blank" rel="noopener" class="project-link-btn">

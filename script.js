@@ -1,3 +1,14 @@
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+const setMenuOpen = (isOpen) => {
+    if (!navToggle || !navMenu) return;
+    navMenu.classList.toggle('open', isOpen);
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navMenu.setAttribute('aria-hidden', String(!isOpen));
+};
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -32,6 +43,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.addEventListener('blur', () => {
                 target.removeAttribute('tabindex');
             }, { once: true });
+        }
+
+        if (navMenu && navMenu.classList.contains('open')) {
+            setMenuOpen(false);
         }
     });
 });
@@ -134,9 +149,27 @@ updateActiveNavLink();
         images = [];
     }
 
-    // Attach click to all screenshot images
+    // Attach click/keyboard to all screenshot images
     document.querySelectorAll('.screenshot-image').forEach(img => {
+        img.setAttribute('role', 'button');
+        if (!img.hasAttribute('tabindex')) {
+            img.setAttribute('tabindex', '0');
+        }
+
+        const captionText = getCaption(img);
+        if (captionText) {
+            img.setAttribute('aria-label', `${captionText} 이미지 확대 보기`);
+        } else {
+            img.setAttribute('aria-label', '이미지 확대 보기');
+        }
+
         img.addEventListener('click', () => open(img));
+        img.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                open(img);
+            }
+        });
     });
 
     btnClose.addEventListener('click', close);
@@ -165,32 +198,53 @@ updateActiveNavLink();
     }, { passive: true });
 }());
 
-// Hamburger menu toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+// External links safety + image loading hints
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    const rel = (link.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+    const relSet = new Set(rel);
+    relSet.add('noopener');
+    relSet.add('noreferrer');
+    link.setAttribute('rel', Array.from(relSet).join(' '));
+});
+
+document.querySelectorAll('img').forEach(img => {
+    if (!img.classList.contains('about-photo') && !img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+    }
+
+    if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+    }
+});
 
 if (navToggle && navMenu) {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navMenu.setAttribute('aria-hidden', 'true');
+
     navToggle.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('open');
-        navToggle.classList.toggle('open', isOpen);
-        navToggle.setAttribute('aria-expanded', isOpen);
+        const isOpen = !navMenu.classList.contains('open');
+        setMenuOpen(isOpen);
     });
 
     // Close menu when a link is clicked
     navMenu.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('open');
-            navToggle.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
+            setMenuOpen(false);
         });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('open');
-            navToggle.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
+            setMenuOpen(false);
+        }
+    });
+
+    // Close menu by keyboard
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+            setMenuOpen(false);
+            navToggle.focus();
         }
     });
 }

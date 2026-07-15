@@ -47,6 +47,24 @@ body {
     font-size: 16px;
 }
 
+.skip-link {
+    position: absolute;
+    left: 12px;
+    top: -48px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 2000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+    top: 10px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -83,6 +101,7 @@ section {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-color);
+    text-decoration: none;
     letter-spacing: 0.02em;
     position: relative;
     padding-right: 16px;
@@ -2692,6 +2711,12 @@ button:focus-visible {
     cursor: zoom-in;
 }
 
+.screenshot-image:focus-visible {
+    outline: 3px solid #6f6f76;
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
     .hero-content {
@@ -2964,6 +2989,17 @@ button:focus-visible {
 
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 

@@ -2099,6 +2099,271 @@ button:focus-visible {
     white-space: nowrap;
 }
 
+/* Redis Migration Visualization */
+.redis-migration {
+    margin-bottom: 38px;
+    padding: 26px;
+    border-radius: 18px;
+    border: 1px solid #cfba98;
+    background: linear-gradient(180deg, #f6ead6 0%, #f2e4cd 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.redis-head {
+    display: grid;
+    gap: 10px;
+}
+
+.redis-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(138, 96, 39, 0.28);
+    background: rgba(255, 252, 245, 0.86);
+    color: #8a6027;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.redis-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #2d1f12;
+    line-height: 1.3;
+}
+
+.redis-title span {
+    display: inline-block;
+    margin-left: 8px;
+    color: #7d5322;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.redis-summary {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #5f4b34;
+    max-width: 900px;
+}
+
+.redis-summary strong {
+    color: #34200f;
+    font-weight: 800;
+    background: linear-gradient(180deg, rgba(255, 221, 165, 0) 54%, rgba(255, 201, 107, 0.34) 54%);
+}
+
+.redis-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.redis-impact-card {
+    background: rgba(255, 250, 241, 0.78);
+    border: 1px solid #d6bd98;
+    border-radius: 14px;
+    padding: 16px 16px 15px;
+    display: grid;
+    gap: 6px;
+    animation: redis-fade-up 0.65s ease both;
+}
+
+.redis-impact-card:nth-child(2) { animation-delay: 0.08s; }
+.redis-impact-card:nth-child(3) { animation-delay: 0.16s; }
+.redis-impact-card:nth-child(4) { animation-delay: 0.24s; }
+
+.redis-impact-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    color: #8a6027;
+    text-transform: uppercase;
+}
+
+.redis-impact-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2f2113;
+    line-height: 1.35;
+}
+
+.redis-impact-note {
+    font-size: 12.5px;
+    color: #6c583f;
+    line-height: 1.65;
+}
+
+.redis-compare {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.redis-panel {
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #c9b08b;
+    background: rgba(255, 252, 246, 0.85);
+    display: grid;
+    gap: 10px;
+}
+
+.redis-panel--before {
+    background: rgba(187, 79, 79, 0.07);
+    border-color: rgba(164, 63, 63, 0.23);
+}
+
+.redis-panel--after {
+    background: rgba(42, 132, 89, 0.1);
+    border-color: rgba(42, 132, 89, 0.28);
+}
+
+.redis-panel-badge {
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(71, 52, 32, 0.2);
+    color: #5f4423;
+}
+
+.redis-panel-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2f2113;
+}
+
+.redis-panel ul {
+    margin-left: 18px;
+    display: grid;
+    gap: 6px;
+}
+
+.redis-panel li {
+    font-size: 13px;
+    color: #5e4b33;
+    line-height: 1.55;
+}
+
+.redis-panel li strong {
+    color: #2f1d0d;
+}
+
+.redis-panel-arrow {
+    align-self: center;
+    font-size: 24px;
+    color: #9a7040;
+    font-weight: 800;
+    padding: 0 4px;
+}
+
+.redis-flow-wrap {
+    border: 1px dashed #c9b08b;
+    border-radius: 12px;
+    padding: 14px;
+    background: rgba(255, 253, 248, 0.8);
+}
+
+.redis-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.redis-node {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #cfba98;
+    background: #fffdf8;
+    color: #45301b;
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.redis-node small {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #806242;
+}
+
+.redis-node--accent {
+    background: linear-gradient(180deg, #fff7e7 0%, #ffe9bf 100%);
+    border-color: #d2ab6f;
+}
+
+.redis-flow-arrow {
+    color: #886037;
+    font-weight: 800;
+}
+
+.redis-flow-branch {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.redis-branch-item {
+    border: 1px solid #d0bb97;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 12px;
+}
+
+.redis-branch-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #8a6027;
+    margin-bottom: 4px;
+}
+
+.redis-branch-item p {
+    font-size: 12.5px;
+    color: #5f4b34;
+    line-height: 1.6;
+}
+
+.redis-risk-note {
+    padding: 11px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(125, 83, 34, 0.28);
+    background: rgba(255, 244, 223, 0.75);
+    font-size: 12.5px;
+    color: #5f4b34;
+    line-height: 1.65;
+}
+
+@keyframes redis-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Refactoring Before/After */
 .refactor-comparison {
     display: grid;
@@ -2224,6 +2489,30 @@ button:focus-visible {
     }
     .refactor-arrow-col {
         transform: rotate(90deg);
+    }
+
+    .redis-impact-grid,
+    .redis-flow-branch {
+        grid-template-columns: 1fr;
+    }
+
+    .redis-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .redis-panel-arrow {
+        justify-self: center;
+        transform: rotate(90deg);
+    }
+
+    .redis-title {
+        font-size: 22px;
+    }
+
+    .redis-title span {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
     }
 }
 

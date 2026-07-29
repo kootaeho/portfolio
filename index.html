@@ -400,6 +400,94 @@
 
                 </div>
 
+                <div class="redis-migration" aria-label="Wearly Redis 적용 결과">
+                    <div class="redis-head">
+                        <p class="redis-eyebrow">Backend Reliability Upgrade</p>
+                        <h4 class="redis-title">Redis 적용 결과 보고서 <span>Job 상태 저장소 전환</span></h4>
+                        <p class="redis-summary">
+                            인메모리 Job 관리(Map/Set)에서 Upstash REST Redis로 전환해
+                            <strong>서버 재시작/다중 인스턴스 환경에서도 상태 추적을 유지</strong>하도록 개선했습니다.
+                            만료 정책은 <strong>Redis TTL 900초(15분)</strong>로 통합하고,
+                            expired marker를 분리해 <strong>만료 vs 미존재</strong>를 명확히 구분했습니다.
+                        </p>
+                    </div>
+
+                    <div class="redis-impact-grid">
+                        <article class="redis-impact-card">
+                            <p class="redis-impact-label">상태 저장 방식</p>
+                            <p class="redis-impact-value"><strong>In-Memory</strong> → <strong>Redis</strong></p>
+                            <p class="redis-impact-note">프로세스 생명주기에서 분리되어 재기동 시 유실 방지</p>
+                        </article>
+                        <article class="redis-impact-card">
+                            <p class="redis-impact-label">만료 정책</p>
+                            <p class="redis-impact-value"><strong>setTimeout</strong> → <strong>EX TTL</strong></p>
+                            <p class="redis-impact-note">설정값 REDIS_JOB_TTL_SECONDS=900으로 일원화</p>
+                        </article>
+                        <article class="redis-impact-card">
+                            <p class="redis-impact-label">상태 조회 정밀도</p>
+                            <p class="redis-impact-value"><strong>Expired Marker</strong> 분리</p>
+                            <p class="redis-impact-note">키 없음 상황에서 만료/미존재 분기 메시지 유지</p>
+                        </article>
+                        <article class="redis-impact-card">
+                            <p class="redis-impact-label">비동기 안정성 보완</p>
+                            <p class="redis-impact-value"><strong>High 이슈 2건</strong> 대응</p>
+                            <p class="redis-impact-note">await 가능한 콜백 + detached catch로 예외 누락 완화</p>
+                        </article>
+                    </div>
+
+                    <div class="redis-compare" aria-label="Redis 전환 전후 비교">
+                        <div class="redis-panel redis-panel--before">
+                            <p class="redis-panel-badge">Before</p>
+                            <h5 class="redis-panel-title">프로세스 메모리 중심 관리</h5>
+                            <ul>
+                                <li><strong>서버 재시작 시 Job 상태 유실</strong></li>
+                                <li>다중 인스턴스에서 상태 불일치 가능</li>
+                                <li>setTimeout 의존 만료 처리</li>
+                            </ul>
+                        </div>
+                        <div class="redis-panel-arrow" aria-hidden="true">→</div>
+                        <div class="redis-panel redis-panel--after">
+                            <p class="redis-panel-badge">After</p>
+                            <h5 class="redis-panel-title">Redis 기반 상태 영속화</h5>
+                            <ul>
+                                <li><strong>재시작/수평 확장 환경에서도 Job 추적 유지</strong></li>
+                                <li>TTL로 자동 만료, 운영 복잡도 감소</li>
+                                <li>expired marker로 만료/미존재 구분 유지</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="redis-flow-wrap">
+                        <p class="metrics-section-label"><i class="fa-solid fa-diagram-project"></i> 상태 저장 흐름 시각화 (Upload Job Lifecycle)</p>
+                        <div class="redis-flow">
+                            <div class="redis-node">Upload 요청</div>
+                            <span class="redis-flow-arrow">→</span>
+                            <div class="redis-node redis-node--accent">createJob<br><small>Redis 저장 + TTL 900s</small></div>
+                            <span class="redis-flow-arrow">→</span>
+                            <div class="redis-node">비동기 처리<br><small>processing</small></div>
+                            <span class="redis-flow-arrow">→</span>
+                            <div class="redis-node">분류/저장 완료<br><small>completed or failed</small></div>
+                            <span class="redis-flow-arrow">→</span>
+                            <div class="redis-node">상태 조회 API</div>
+                        </div>
+                        <div class="redis-flow-branch">
+                            <div class="redis-branch-item">
+                                <span class="redis-branch-tag">Key Exists</span>
+                                <p>processing / completed / failed 반환</p>
+                            </div>
+                            <div class="redis-branch-item">
+                                <span class="redis-branch-tag">Key Missing</span>
+                                <p>expired marker 확인 후 만료/미존재 분기</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="redis-risk-note">
+                        남은 리스크: 현재 read-modify-write 패턴 특성상 극단적 동시 호출에서는 마지막 쓰기 우선 현상이 일부 남아있어,
+                        후속으로 Lua 또는 필드 단위 원자 업데이트 전략을 검토 중입니다.
+                    </p>
+                </div>
+
                 <div class="project-screenshots">
                     <div class="project-section-head">
                         <h4 class="screenshots-title">주요 화면 스크린샷</h4>

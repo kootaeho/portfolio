@@ -913,6 +913,39 @@ button:focus-visible {
     margin-bottom: 24px;
 }
 
+.project-header-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.project-toggle-btn {
+    border: 1px solid var(--project-panel-border);
+    background: var(--project-panel-alt-bg);
+    color: var(--text-color);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.project-toggle-btn:hover {
+    border-color: var(--project-accent-soft);
+    transform: translateY(-1px);
+}
+
+.project-toggle-btn[aria-expanded="false"] {
+    background: #ffffff;
+}
+
+.project-collapsible-content[hidden] {
+    display: none !important;
+}
+
 .project-title {
     font-size: 32px;
     font-weight: 700;

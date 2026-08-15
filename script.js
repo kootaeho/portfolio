@@ -248,3 +248,54 @@ if (navToggle && navMenu) {
         }
     });
 }
+
+// Project card collapse/expand (single-page 유지)
+(function () {
+    const projectCards = document.querySelectorAll('#projects .project-card');
+    if (!projectCards.length) return;
+
+    projectCards.forEach((card, index) => {
+        const directChildren = Array.from(card.children);
+        if (directChildren.length < 3) return;
+
+        const header = card.querySelector(':scope > .project-header');
+        if (!header) return;
+
+        const collapseId = `project-collapse-${index + 1}`;
+        const contentWrap = document.createElement('div');
+        contentWrap.className = 'project-collapsible-content';
+        contentWrap.id = collapseId;
+
+        directChildren.slice(2).forEach((node) => {
+            contentWrap.appendChild(node);
+        });
+
+        card.appendChild(contentWrap);
+
+        const toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'project-toggle-btn';
+        toggleBtn.setAttribute('aria-controls', collapseId);
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.textContent = '접기';
+
+        const existingBadge = header.querySelector(':scope > .project-badge');
+        const actions = document.createElement('div');
+        actions.className = 'project-header-actions';
+
+        if (existingBadge) {
+            actions.appendChild(existingBadge);
+        }
+
+        actions.appendChild(toggleBtn);
+        header.appendChild(actions);
+
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            const nextExpanded = !isExpanded;
+            toggleBtn.setAttribute('aria-expanded', String(nextExpanded));
+            toggleBtn.textContent = nextExpanded ? '접기' : '펼치기';
+            contentWrap.hidden = !nextExpanded;
+        });
+    });
+}());

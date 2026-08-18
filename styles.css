@@ -536,6 +536,39 @@ button:focus-visible {
 .about-info-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(17, 17, 17, 0.05);
+    border-color: rgba(31, 155, 152, 0.28);
+}
+
+.about-info-item:nth-child(1) {
+    background: linear-gradient(180deg, rgba(31, 155, 152, 0.07) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(2) {
+    background: linear-gradient(180deg, rgba(79, 131, 255, 0.07) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(3) {
+    background: linear-gradient(180deg, rgba(138, 99, 255, 0.07) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(4) {
+    background: linear-gradient(180deg, rgba(255, 139, 74, 0.08) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(5) {
+    background: linear-gradient(180deg, rgba(31, 155, 152, 0.08) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(6) {
+    background: linear-gradient(180deg, rgba(79, 131, 255, 0.08) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(7) {
+    background: linear-gradient(180deg, rgba(138, 99, 255, 0.08) 0%, rgba(255,255,255,0.9) 100%);
+}
+
+.about-info-item:nth-child(8) {
+    background: linear-gradient(180deg, rgba(255, 139, 74, 0.08) 0%, rgba(255,255,255,0.9) 100%);
 }
 
 .about-key {
@@ -543,8 +576,20 @@ button:focus-visible {
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #5f636d;
+    color: #4c5a68;
     margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-key::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-blue) 100%);
+    box-shadow: 0 0 0 4px rgba(31, 155, 152, 0.12);
 }
 
 .about-value {
@@ -554,6 +599,21 @@ button:focus-visible {
     font-weight: 600;
     overflow-wrap: break-word;
     word-break: keep-all;
+    display: inline-block;
+    position: relative;
+}
+
+.about-value strong,
+.about-value span {
+    color: var(--primary-color);
+}
+
+.about-info-item:nth-child(2n) .about-value {
+    color: #1a1c20;
+}
+
+.about-info-item:nth-child(3n) .about-value {
+    color: #1d232d;
 }
 
 .text-emphasis {
